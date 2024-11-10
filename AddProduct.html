@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Product | Lumina</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+             <!-- Navigation -->
+        <nav >
+            <div class="logo">
+                <img src="images/logo.png" alt="Lumina Logo">
+            </div>
+            <div class="categories-head">
+                <a href="electronics.html">Electronics</a>
+                <a href="makeup.html">Make-Up</a>
+                <a href="decor.html">Decor</a>
+            </div>
+            <div class="header-icons">
+                <a href="CustomerPage.html" class="oval-button">Customer</a>
+                <a href="SellerPage.html" class="oval-button">Seller</a>
+
+                <a href="HomePage.html"><img src="images/home.png" class="icon" alt="Home"></a>
+                <a href="CartPage.html"><img src="images/cart.png" class="icon" alt="Cart"></a>
+            </div>
+        </nav>
+           <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <a href="HomePage.html">Home</a> &gt; <a href="SellerPage.html">Seller</a> &gt; Add New Product
+    </div>
+    </header>
+
+    <main id="AddProductOffer" class="Product">
+       
+
+        <div class="Form-heading add-product-heading">
+            <h2>Add New Product</h2>
+        </div>
+
+        <div class="form-container add-product-form">
+            <form action="example.ex" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="product-name">Product Name</label>
+                        <input type="text" id="product-name" name="product_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Price</label>
+                        <input type="number" id="price" name="price" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="category-list">Category</label>
+                        <div class="styled-select">
+                            <select id="category-list" name="category-list" class="categoryAddProduct" required>
+                                <option disabled selected value="">Select a category</option>
+                                <option value="electronics">Electronics</option>
+                                <option value="makeup">Make-up</option>
+                                <option value="decor">Decor</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="form-group">
+                        <label for="num-items">Number of Items</label>
+                        <input type="number" id="num-items" name="num_items" value="100" min="1" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" required></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="upload-container add-product-upload">
+                        <label for="file-upload" class="upload-box">
+                            <span id="plus">+</span>
+                            <span>Upload Photo</span>
+                        </label>
+                        <input type="file" id="file-upload" name="product_image" hidden required>
+                    </div>
+                    <button type="submit" class="add-product-btn">Add Product</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <p>Contact Us</p>
+            <p><img src="images/instagram.png" alt="instagram">@Lumina</p>
+            <p><img src="images/x.png" alt="x">@Lumina</p>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 IT312</p>
+        </div>
+    </footer>
+</body>
+</html>

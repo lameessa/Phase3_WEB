@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart | Lumina</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <nav>
+        <div class="logo">
+            <img src="images/logo.png" alt="Lumina Logo">
+        </div>
+        <div class="categories-head">
+            <a href="Electronics.html">Electronics</a>
+            <a href="Makeup.html">Make-up</a>
+            <a href="Decor.html">Decor</a>
+        </div>
+        <div class="header-icons">
+            <a href="CustomerPage.html" class="oval-button">Customer</a>
+            <a href="SellerPage.html" class="oval-button">Seller</a>
+            <a href="HomePage.html"><img src="images/home.png" class="icon" alt="Home"></a>
+            <a href="CartPage.html" id="cart-icon"><img src="images/cart.png" class="icon" alt="Cart"></a>
+        </div>
+    </nav>
+    
+    <div class="breadcrumbs">
+        <a href="HomePage.html">Home</a> &gt; <a href="CustomerPage.html">Customer</a> &gt; <a class="thisPage" href="CartPage.html">Cart</a>
+    </div>
+</header>
+
+<main class="cart">
+    <h1>In Your Cart</h1>
+    <form action="acknowledgement.html" method="POST" class="cart-form">
+        <fieldset>
+            <legend class="hide-label">Select items in your cart</legend>
+            <section class="cart-edit">
+                <!-- Cart Items -->
+                <ul class="cart-items">
+                    <li class="cart-item">
+                        <label class="hide-label" for="item1">Select Hanging Arm Lamp</label>
+                        <input type="checkbox" id="item1" checked>
+                        <img src="images/hanging-arm-lamp.png" alt="Hanging Arm Lamp">
+                        <div class="item-info">
+                            <h2>Hanging Arm Lamp</h2>
+                            <p>6 inch diameter white conical shade hanging arm lamp attached to a sleek, metallic silver-toned arm and body.</p>
+                        </div>
+                        <div class="quantity">
+                            <label class="hide-label" for="quantity1">Quantity</label>
+                            <input type="number" id="quantity1" value="1" min="1">
+                        </div>
+                        <div class="price">$49.95</div>
+                        <button class="remove-item" type="button">X</button>
+                    </li>
+
+                    <li class="cart-item">
+                        <label class="hide-label" for="item2">Select Earthenware Crockery</label>
+                        <input type="checkbox" id="item2" checked>
+                        <img src="images/earthenware-crockery.png" alt="Earthenware Crockery">
+                        <div class="item-info">
+                            <h2>Earthenware Crockery</h2>
+                            <p>Ceramic earthenware crockery set featuring vibrant cobalt blue glaze with speckled earthy tones, including cups and plates with smooth, rounded edges.</p>
+                        </div>
+                        <div class="quantity">
+                            <label class="hide-label" for="quantity2">Quantity</label>
+                            <input type="number" id="quantity2" value="1" min="1">
+                        </div>
+                        <div class="price">$49.95</div>
+                        <button class="remove-item" type="button">X</button>
+                    </li>
+
+                    <li class="cart-item">
+                        <label class="hide-label" for="item3">Select Lipstick</label>
+                        <input type="checkbox" id="item3" checked>
+                        <img src="images/lip.png" alt="Lipstick">
+                        <div class="item-info">
+                            <h2>Lipstick</h2>
+                            <p>A moisturizing satin lipstick that nourishes the lips with creamy lip color for a well-hydrated look.</p>
+                        </div>
+                        <div class="quantity">
+                            <label class="hide-label" for="quantity3">Quantity</label>
+                            <input type="number" id="quantity3" value="1" min="1">
+                        </div>
+                        <div class="price">$45.00</div>
+                        <button class="remove-item" type="button">X</button>
+                    </li>
+                </ul>
+                
+                <!-- Cart Actions -->
+                <div class="cart-actions">
+                    <label for="selectAll-btn" class="hide-label"> Select all</label>
+					<input type="button" value="Select All" id="selectAll-btn">
+                    <label for="removeAll-btn" class="hide-label"> Remove all </label>
+					<input type="reset" value="Remove All" id="removeAll-btn">
+                </div>
+            </section>
+        </fieldset>
+
+        <!-- Summary Section -->
+        <aside class="summary">
+            <h2>Summary</h2> 
+            <div class="summary-details">
+                <p>Sub Total: $99.90</p>
+                <p>Delivery Fee: $20.00</p> 
+                <hr>
+                <p><strong>Total: $164.90</strong></p>
+            </div>
+            <input type="submit" value="Checkout" class="checkout">
+        </aside>
+    </form>
+</main>
+
+<!-- Footer -->
+<footer>
+    <div class="contact-info">
+        <p>Contact Us</p>
+        <p><img src="images/instagram.png" alt="Instagram">@Lumina</p>
+        <p><img src="images/x.png" alt="X">@Lumina</p>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2024 IT312</p>
+    </div>
+</footer>
+
+</body>
+</html>

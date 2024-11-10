@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Product | Lumina</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+             <!-- Navigation -->
+        <nav >
+            <div class="logo">
+                <img src="images/logo.png" alt="Lumina Logo">
+            </div>
+            <div class="categories-head">
+                <a href="electronics.html">Electronics</a>
+                <a href="makeup.html">Make-Up</a>
+                <a href="decor.html">Decor</a>
+            </div>
+            <div class="header-icons">
+                <a href="CustomerPage.html" class="oval-button">Customer</a>
+                <a href="SellerPage.html" class="oval-button">Seller</a>
+
+                <a href="HomePage.html"><img src="images/home.png" class="icon" alt="Home"></a>
+                <a href="CartPage.html"><img src="images/cart.png" class="icon" alt="Cart"></a>
+            </div>
+        </nav>
+           <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <a href="HomePage.html">Home</a> &gt; <a href="SellerPage.html">Seller</a> &gt; Add Offer
+    </div>
+    </header>
+
+    <main id="AddProductOffer" class="offer">
+        <h2 class="offer-heading">My Offers</h2>
+
+        <div class="offers-wrapper">
+            <div class="offers-scroll-container">
+                <div class="offers-container">
+                    <div class="offer-item">
+                        <label for="offer1-checkbox" class="hide-label">Select Lip Gloss Offer</label>
+                        <input type="checkbox" id="offer1-checkbox" class="offer-checkbox">
+                        <img src="images/offer1.PNG" alt="Lip Gloss ">
+                        <div class="offer-details">
+                            <h3>Lip Gloss Set At A Special Price!</h3>
+                            <p>FENTY BEAUTY Lil Gloss Bomb Trio Mini Lip Gloss Set</p>
+                        </div>
+                    </div>
+
+                    <div class="offer-item">
+                        <label for="offer2-checkbox" class="hide-label">Select Charger Offer</label>
+                        <input type="checkbox" id="offer2-checkbox" class="offer-checkbox">
+                        <img src="images/offer2.png" alt="Charger">
+                        <div class="offer-details">
+                            <h3>FREE USB C Charger</h3>
+                            <p>5V 2A Power Adapter with free USB C Charger</p>
+                        </div>
+                    </div>
+
+                    <div class="offer-item">
+                        <label for="offer3-checkbox" class="hide-label">Select Tableware Offer</label>
+                        <input type="checkbox" id="offer3-checkbox" class="offer-checkbox">
+                        <img src="images/offer3.png" alt="tableware">
+                        <div class="offer-details">
+                            <h3>Buy 1 get 2nd FREE!</h3>
+                            <p>Buy one, get second free tableware.</p>
+                        </div>
+                    </div>
+
+                    <div class="offer-item">
+                        <label for="offer4-checkbox" class="hide-label">Select Vase Offer</label>
+                        <input type="checkbox" id="offer4-checkbox" class="offer-checkbox">
+                        <img src="images/offer4.png" alt="Vase">
+                        <div class="offer-details">
+                            <h3>3 For The Price Of 2!</h3>
+                            <p>3pcs Beige Ceramic Vase for the price of 2!</p>
+                        </div>
+                    </div>
+
+                    <div class="offer-item">
+                        <label for="offer5-checkbox" class="hide-label">Select Makeup Offer</label>
+                        <input type="checkbox" id="offer5-checkbox" class="offer-checkbox">
+                        <img src="images/offer5.png" alt="Make-up set">
+                        <div class="offer-details">
+                            <h3>FULL MakeUp Set</h3>
+                            <p>MAKE UP FOR EVER Essentials Set</p>
+                        </div>
+                    </div>
+
+                    <div class="offer-item">
+                        <label for="offer6-checkbox" class="hide-label">Select Webcam Offer</label>
+                        <input type="checkbox" id="offer6-checkbox" class="offer-checkbox">
+                        <img src="images/offer6.png" alt="Webcam">
+                        <div class="offer-details">
+                            <h3>WEBCAM with Free Tripod</h3>
+                            <p>Webcam with Conference Speaker and Microphone</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="delete-button">Delete Selected Offer</button>
+
+        <div class="add-offer-section">
+            <h3 class="add-offer-heading">Add Offer</h3>
+            <form class="form-container add-offer-form">
+                <div class="form-group">
+                    <label for="offer-title">Title</label>
+                    <input type="text" id="offer-title" name="offer_title" required>
+                </div>
+                <div class="form-group">
+                    <label for="offer-description">Description</label>
+                    <textarea id="offer-description" name="offer_description" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="offer-discount">Discount</label>
+                    <input type="number" id="offer-discount" name="offer_discount" min="0" max="100" required>
+                </div>
+                <div class="upload-container add-offer-upload">
+                    <label for="offer-upload" class="offer-upload-box">
+                        <span id="plus">+</span>
+                        <span>Upload Photo</span>
+                    </label>
+                    <input type="file" id="offer-upload" name="offer_image" hidden required>
+                </div>
+                <button type="submit" class="add-offer-button">Add Offer</button>
+            </form>
+        </div>
+    </main>
+
+    
+    <footer>
+        <div class="contact-info">
+            <p>Contact Us</p>
+            <p><img src="images/instagram.png" alt="instagram">@Lumina</p>
+            <p><img src="images/x.png" alt="x">@Lumina</p>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 IT312</p>
+        </div>
+    </footer>
+</body>
+</html>

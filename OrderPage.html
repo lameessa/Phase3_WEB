@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Summary | Lumina</title>
+    <link rel="stylesheet" href="styles.css">
+	
+</head>
+
+    <body>
+    <!-- Header -->
+	   <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="Lumina Logo">
+            </div>
+            <div class="categories-head">
+                <a href="Electronics.html">Electronics</a>
+            <a href="Makeup.html">Make-up</a>
+            <a href="Decor.html">Decor</a>
+            </div>
+            <div class="header-icons">
+				<a href="CustomerPage.html" class="oval-button">Customer</a>
+				<a href="SellerPage.html" class="oval-button">Seller</a>
+                <a href="HomePage.html"><img src="images/home.png" class="icon" alt="Home"></a>
+                <a href="CartPage.html"><img src="images/cart.png" class="icon" alt="Cart"></a>
+            </div>
+        </nav>
+
+    <!--Breadcrumbs-->
+    <div class="breadcrumbs">
+        <a href="HomePage.html">Home</a> &gt; <a href="CustomerPage.html">Customer</a> &gt; <a class = "thisPage" href=" OrderPage.html">Order Summary</a>
+    </div>
+    </header>
+	
+		
+ 
+     
+    <!-- Main Container -->
+	
+       
+          
+          
+     <main class = "orderp">    
+		 
+    <div class="container">
+        
+        <div class="order-header">
+            <h2>ORDERS:</h2>
+            <label for="order-list" class = "hide-label" >Select an order number:</label>
+            <select id="order-list" class="order-number" name="order-list">
+                <option value="" disabled selected>ORDER NUMBER</option>
+                <option>#123-456-789</option>
+                <option>#987-654-321</option>
+                <option>#112-334-556</option>
+            </select>
+            </div>
+
+		
+
+
+        <!-- Order Summary -->
+        <div class="order-summary">
+            <span>ORDER SUMMARY<br>
+            #123-456-789</span><br>
+            <small id = "date" ><span>ORDER TIME: APRIL 2, 2024 10:34 </span></small>
+        </div>
+
+        <!-- Order Items -->
+		<hr>
+        <div class="order-item">
+            <div class="item-details">
+                <img src="images/n.png" alt="Two Vases">
+                <div class="item-description">
+                    <h6><span>The Vase Duo</span></h6>
+                    <p>A pair of sleek, minimalist wooden vases. Crafted from natural wood with a smooth, polished finish.</p>
+                    <div class="ratings">&#9733;&#9733;&#9733;&#9733;&#9734;</div> 
+                </div>
+            </div>
+            <div class="item-info">
+                 QTY: <span class="num"> 3 </span>
+				<br>
+                <span class="price"> 19.95$ </span>
+            </div>
+        </div>
+
+        <div class="order-item">
+            <div class="item-details">
+                <img src="images/mr.png" alt="Unique mirrors">
+                <div class="item-description">
+                    <h6><span>Unique mirrors</span></h6>
+                    <p>Decorative Mirror with a Sleek Ceramic Design at Modern Ceramic Accent.</p>
+                    <div class="ratings">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                </div>
+            </div>
+            <div class="item-info">
+                QTY: <span class="num"> 2 </span>
+				<br>
+                29.95$
+            </div>
+        </div>
+		<hr>
+<div class="total">
+<strong> Total: <span class="total-price"> 49.9$ </span> </strong>
+</div>
+        <!-- Shipping Details -->
+        <div class="shipping-details">
+            <h3>SHIPPING DETAILS</h3>
+			<hr>
+            <table>
+                <tr>
+                    <td><span>EMAIL</span><br>jenny4353@gmail.com</td>
+                    <td><span>SHIPPING ADDRESS</span><br>123 Easy Street<br>Saudi Arabia<br>(123) 456 7899</td>
+                    <td><span >SHIPPING METHOD</span><br>Standard Shipping</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+        <!-- Contact Info -->
+		<hr>
+     </main>  
+    
+    <!-- Footer -->
+	<footer>
+    <div class="contact-info">
+        <p>Contact Us</p>
+        <p><img src="images/instagram.png" alt="instagram">@Lumina</p>
+        <p><img src="images/x.png" alt="x">@Lumina</p>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2024 IT312</p>
+    </div>
+    </footer>
+	
+    </body>
+</html>
