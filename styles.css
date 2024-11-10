@@ -530,9 +530,9 @@ display: inline;
 
 
 
-.user-info h1{
-   position: relative;
-   margin-right:66% ;
+ #CustomerMain h1{
+   display: flex; 
+   justify-content: center;
    font-size: 2rem;
    margin-bottom:1.25em ;
 }
@@ -1266,13 +1266,13 @@ footer {
         padding: 2.5em 15%;
     }
     
-    .Form-heading {
+    #AddProductOffer .Form-heading {
         display: inline-block;
         font-size: 2em;
         padding: 0.4em;
     }
     
-    .form-container {
+    #AddProductOffer .form-container {
         background-color: #fafafa;
         padding: 1.875em;
         box-shadow: 0 0 0.625em rgba(0, 0, 0, 0.1);
@@ -1281,7 +1281,7 @@ footer {
         gap: 1.25em;
     }
     
-    .form-row {
+    #AddProductOffer .form-row {
         display: flex;
         justify-content: space-between;
         gap: 1.875em;
@@ -1289,11 +1289,11 @@ footer {
         align-items: flex-start;
     }
     
-    .form-group {
+    #AddProductOffer .form-group {
         flex: 1;
     }
     
-    .form-group input {
+    #AddProductOffer .form-group input {
         width: 100%;
         padding: 0.5em;
         border: 0.0625em solid #ddd;
@@ -1302,7 +1302,7 @@ footer {
         margin-top: 0.3125em;
     }
     
-    .form-group textarea {
+    #AddProductOffer .form-group textarea {
         height: 10em;
         width: 100%;
         padding: 0.5em;
@@ -1312,7 +1312,7 @@ footer {
         margin-top: 0.3125em;
     }
     
-    .upload-container {
+    #AddProductOffer .upload-container {
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -1321,7 +1321,7 @@ footer {
         width: 12.5em;
     }
     
-    .upload-box, .offer-upload-box {
+    #AddProductOffer .upload-box, .offer-upload-box {
         width: 12.5em;
         height: 12.5em;
         border: 0.125em dashed #ccc;
@@ -1334,23 +1334,23 @@ footer {
         transition: border-color 0.3s, background-color 0.3s;
     }
     
-    .upload-box:hover, .offer-upload-box:hover {
+    #AddProductOffer .upload-box:hover, .offer-upload-box:hover {
         border-color: #007bff;
         background-color: #f0f8ff;
     }
     
-    .upload-box #plus, .offer-upload-box #plus {
+    #AddProductOffer .upload-box #plus, .offer-upload-box #plus {
         font-size: 2.5em;
         color: #999;
         margin-bottom: 0.625em;
     }
     
-    .upload-box span, .offer-upload-box span {
+    #AddProductOffer .upload-box span, .offer-upload-box span {
         color: #555;
         font-size: 0.875em;
     }
     
-    .add-product-btn, .add-offer-button {
+    #AddProductOffer .add-product-btn, .add-offer-button {
         width: 11.25em;
         height: 2.5em;
         background-color: #333;
@@ -1361,20 +1361,20 @@ footer {
         align-self: flex-end;
     }
     
-    .offers-wrapper {
+    #AddProductOffer .offers-wrapper {
         background-color: #fafafa;
         padding: 1.25em;
         box-shadow: 0 0 0.625em rgba(0, 0, 0, 0.1);
         margin: 1.25em 0;
     }
     
-    .offers-container {
+    #AddProductOffer .offers-container {
         display: flex;
         flex-direction: column;
         gap: 0.9375em;
     }
     
-    .offer-item {
+    #AddProductOffer .offer-item {
         display: flex;
         align-items: center;
         gap: 0.625em;
@@ -1384,22 +1384,22 @@ footer {
         box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.1);
     }
     
-    .offer-item img {
+    #AddProductOffer .offer-item img {
         width: 6.25em;
         height: 6.25em;
         object-fit: contain;
     }
     
-    .offer-details {
+    #AddProductOffer .offer-details {
         flex: 1;
     }
     
-    .offer-checkbox {
+    #AddProductOffer .offer-checkbox {
         width: 1.25em;
         height: 1.25em;
     }
     
-    .delete-button {
+    #AddProductOffer .delete-button {
         margin-top: 1.25em;
         padding: 0.625em 1.25em;
         background-color: #d9534f;
@@ -1410,7 +1410,7 @@ footer {
     }
 
     
-    .styled-select::after {
+    #AddProductOffer .styled-select::after {
         content: '⌄';
         font-size: 1em;
         color: #666;
@@ -1424,13 +1424,13 @@ footer {
 
 
     
-    .styled-select {
+    #AddProductOffer .styled-select {
         position: relative;
         max-width: 31.25em;
         width: 100%;
     }
     
-    .categoryAddProduct {
+    #AddProductOffer .categoryAddProduct {
         width: 100%;
         padding: 0.625em;
         font-size: 1em;
