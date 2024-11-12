@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-
-
 <head>
     <meta charset="UTF-8">
     <title>Add New Product | Lumina</title>
@@ -8,8 +6,8 @@
 </head>
 <body>
     <header>
-             <!-- Navigation -->
-        <nav >
+        <!-- Navigation -->
+        <nav>
             <div class="logo">
                 <a href="HomePage.html"><img src="images/logo.png" alt="Lumina Logo"></a>
             </div>
@@ -21,15 +19,14 @@
             <div class="header-icons">
                 <a href="CustomerPage.html" class="oval-button">Customer</a>
                 <a href="SellerPage.html" class="oval-button">Seller</a>
-
                 <a href="HomePage.html"><img src="images/home.png" class="icon" alt="Home"></a>
                 <a href="CartPage.html"><img src="images/cart.png" class="icon" alt="Cart"></a>
             </div>
         </nav>
-           <!-- Breadcrumbs -->
-    <div class="breadcrumbs">
-        <a href="HomePage.html">Home</a> &gt; <a href="SellerPage.html">Seller</a> &gt; Add Offer
-    </div>
+        <!-- Breadcrumbs -->
+        <div class="breadcrumbs">
+            <a href="HomePage.html">Home</a> &gt; <a href="SellerPage.html">Seller</a> &gt; Add Offer
+        </div>
     </header>
 
     <main id="AddProductOffer" class="offer">
@@ -38,65 +35,7 @@
         <div class="offers-wrapper">
             <div class="offers-scroll-container">
                 <div class="offers-container">
-                    <div class="offer-item">
-                        <label for="offer1-checkbox" class="hide-label">Select Lip Gloss Offer</label>
-                        <input type="checkbox" id="offer1-checkbox" class="offer-checkbox">
-                        <img src="images/offer1.PNG" alt="Lip Gloss ">
-                        <div class="offer-details">
-                            <h3>Lip Gloss Set At A Special Price!</h3>
-                            <p>FENTY BEAUTY Lil Gloss Bomb Trio Mini Lip Gloss Set</p>
-                        </div>
-                    </div>
-
-                    <div class="offer-item">
-                        <label for="offer2-checkbox" class="hide-label">Select Charger Offer</label>
-                        <input type="checkbox" id="offer2-checkbox" class="offer-checkbox">
-                        <img src="images/offer2.png" alt="Charger">
-                        <div class="offer-details">
-                            <h3>FREE USB C Charger</h3>
-                            <p>5V 2A Power Adapter with free USB C Charger</p>
-                        </div>
-                    </div>
-
-                    <div class="offer-item">
-                        <label for="offer3-checkbox" class="hide-label">Select Tableware Offer</label>
-                        <input type="checkbox" id="offer3-checkbox" class="offer-checkbox">
-                        <img src="images/offer3.png" alt="tableware">
-                        <div class="offer-details">
-                            <h3>Buy 1 get 2nd FREE!</h3>
-                            <p>Buy one, get second free tableware.</p>
-                        </div>
-                    </div>
-
-                    <div class="offer-item">
-                        <label for="offer4-checkbox" class="hide-label">Select Vase Offer</label>
-                        <input type="checkbox" id="offer4-checkbox" class="offer-checkbox">
-                        <img src="images/offer4.png" alt="Vase">
-                        <div class="offer-details">
-                            <h3>3 For The Price Of 2!</h3>
-                            <p>3pcs Beige Ceramic Vase for the price of 2!</p>
-                        </div>
-                    </div>
-
-                    <div class="offer-item">
-                        <label for="offer5-checkbox" class="hide-label">Select Makeup Offer</label>
-                        <input type="checkbox" id="offer5-checkbox" class="offer-checkbox">
-                        <img src="images/offer5.png" alt="Make-up set">
-                        <div class="offer-details">
-                            <h3>FULL MakeUp Set</h3>
-                            <p>MAKE UP FOR EVER Essentials Set</p>
-                        </div>
-                    </div>
-
-                    <div class="offer-item">
-                        <label for="offer6-checkbox" class="hide-label">Select Webcam Offer</label>
-                        <input type="checkbox" id="offer6-checkbox" class="offer-checkbox">
-                        <img src="images/offer6.png" alt="Webcam">
-                        <div class="offer-details">
-                            <h3>WEBCAM with Free Tripod</h3>
-                            <p>Webcam with Conference Speaker and Microphone</p>
-                        </div>
-                    </div>
+                    <!-- Offers will be displayed dynamically using JavaScript -->
                 </div>
             </div>
         </div>
@@ -130,7 +69,6 @@
         </div>
     </main>
 
-    
     <footer>
         <div class="contact-info">
             <p>Contact Us</p>
@@ -142,36 +80,36 @@
         </div>
     </footer>
 
-   <script>
-    function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
 
-    // Save user preference to localStorage
-    const isDarkMode = document.body.classList.contains("dark-mode");
-    localStorage.setItem("darkMode", isDarkMode);
+            // Save user preference to localStorage
+            const isDarkMode = document.body.classList.contains("dark-mode");
+            localStorage.setItem("darkMode", isDarkMode);
 
-    // Change the vision section image based on the mode
-    const visionImage = document.querySelector(".vision-image img");
-    visionImage.src = isDarkMode ? "images/Image-1 2.png" : "images/vision.png";
-}
+            // Change the vision section image based on the mode
+            const visionImage = document.querySelector(".vision-image img");
+            visionImage.src = isDarkMode ? "images/Image-1 2.png" : "images/vision.png";
+        }
 
-// Load Dark Mode preference on page load
-document.addEventListener("DOMContentLoaded", () => {
-    const isDarkMode = localStorage.getItem("darkMode") === "true";
-    
-    if (isDarkMode) {
-        document.body.classList.add("dark-mode");
-        document.getElementById("darkModeToggle").checked = true;
-        
-        // Set the dark mode image on page load if dark mode is enabled
-        const visionImage = document.querySelector(".vision-image img");
-        visionImage.src = "images/Image-1 2.png";
-    } else {
-        const visionImage = document.querySelector(".vision-image img");
-        visionImage.src = "images/vision.png";
-    }
-});
-
-</script>
+        // Load Dark Mode preference on page load
+        document.addEventListener("DOMContentLoaded", () => {
+            const isDarkMode = localStorage.getItem("darkMode") === "true";
+            
+            if (isDarkMode) {
+                document.body.classList.add("dark-mode");
+                document.getElementById("darkModeToggle").checked = true;
+                
+                // Set the dark mode image on page load if dark mode is enabled
+                const visionImage = document.querySelector(".vision-image img");
+                visionImage.src = "images/Image-1 2.png";
+            } else {
+                const visionImage = document.querySelector(".vision-image img");
+                visionImage.src = "images/vision.png";
+            }
+        });
+    </script>
+    <script src="script1.js"></script>
 </body>
 </html>
