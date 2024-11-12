@@ -10,29 +10,36 @@
     <header>
 
         <!--Navigation-->
-        <nav>
-                <div class="logo">
-                    <a href="HomePage.html"><img src="images/logo.png" alt="Lumina Logo"></a>
-                </div>
-        
-                <div class="categories-head">
-        
-            <a href="Electronics.html">Electronics</a>
-            <a href="Makeup.html">Make-up</a>
-            <a href="Decor.html">Decor</a>
-        
-                </div>
-        
-                <div class="header-icons">
-        
-				<a href="CustomerPage.html" class="oval-button">Customer</a>
-				<a href="SellerPage.html" class="oval-button">Seller</a>
-                    <a href="HomePage.html"><img src="images/home.png" id="HomeIcon" class="icon" alt="Home"></a>
-        
-                    <a href="CartPage.html"><img src="images/cart.png" class="icon" alt="Cart"></a>
-        
-                </div>
-        </nav>
+         <!--Navigation-->
+         <nav>
+            <div class="logo">
+    
+                <img src="images/logo.png" alt="Lumina Logo">
+    
+            </div>
+    
+            <div class="categories-head">
+    
+        <a href="Electronics.html">Electronics</a>
+        <a href="Makeup.html">Make-up</a>
+        <a href="Decor.html">Decor</a>
+    
+            </div>
+    
+           
+            
+            
+                
+                
+            <a href="CustomerPage.html" class="oval-button">Customer</a>
+            <a href="SellerPage.html" class="oval-button">Seller</a>
+                <a href="HomePage.html"><img src="images/home.png" id="HomeIcon" class="icon" alt="Home"></a>
+    
+                <a href="CartPage.html"><img src="images/cart.png" class="icon" alt="Cart"></a>
+    
+            </div>
+    </nav>
+    
         
         
         
@@ -182,5 +189,45 @@
         <p>&copy; 2024 IT312</p>
     </div>
 </footer>
+<div class="floating-toggle-container">
+    <input type="checkbox" id="darkModeToggle" onclick="toggleDarkMode()">
+    <label for="darkModeToggle" class="toggle-label">
+        <span class="toggle-icon moon-icon">🌙</span>
+        <span class="toggle-icon sun-icon">☀️</span>
+    </label>
+</div>
+
+<script>
+    function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+
+    // Save user preference to localStorage
+    const isDarkMode = document.body.classList.contains("dark-mode");
+    localStorage.setItem("darkMode", isDarkMode);
+
+    // Change the vision section image based on the mode
+    const visionImage = document.querySelector(".vision-image img");
+    visionImage.src = isDarkMode ? "images/Image-1 2.png" : "images/vision.png";
+}
+
+// Load Dark Mode preference on page load
+document.addEventListener("DOMContentLoaded", () => {
+    const isDarkMode = localStorage.getItem("darkMode") === "true";
+    
+    if (isDarkMode) {
+        document.body.classList.add("dark-mode");
+        document.getElementById("darkModeToggle").checked = true;
+        
+        // Set the dark mode image on page load if dark mode is enabled
+        const visionImage = document.querySelector(".vision-image img");
+        visionImage.src = "images/Image-1 2.png";
+    } else {
+        const visionImage = document.querySelector(".vision-image img");
+        visionImage.src = "images/vision.png";
+    }
+});
+
+</script>
+
 </body>
 </html>
