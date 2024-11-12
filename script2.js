@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        // قراءة ملف الصورة وتحويله إلى Base64
         const file = fileInput.files[0];
         if (file) {
             const reader = new FileReader();
@@ -45,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     category: category,
                     numItems: parseInt(numItems, 10),
                     description: description,
-                    imageUrl: imageUrl // إضافة الصورة إلى البيانات
+                    imageUrl: imageUrl 
                 };
                 products.push(newProduct);
                 localStorage.setItem("products", JSON.stringify(products));
