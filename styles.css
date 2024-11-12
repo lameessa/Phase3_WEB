@@ -1589,7 +1589,10 @@ body.dark-mode #Homemain .reviews {
     color: #dddddd;
 }
 
-body.dark-mode div.offers-wrapper{
+body.dark-mode div.offers-wrapper,
+body.dark-mode div.container,
+body.dark-mode div.shipping-details,
+body.dark-mode div.order-summary{
     background-color: #222222 !important;
 }
 
