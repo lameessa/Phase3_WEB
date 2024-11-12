@@ -11,7 +11,7 @@
 <header>
     <nav>
         <div class="logo">
-	    <a href="HomePage.html"><img src="images/logo.png" alt="Lumina Logo"></a>
+            <a href="HomePage.html"><img src="images/logo.png" alt="Lumina Logo"></a>
         </div>
         <div class="categories-head">
             <a href="Electronics.html">Electronics</a>
@@ -37,63 +37,17 @@
         <fieldset>
             <legend class="hide-label">Select items in your cart</legend>
             <section class="cart-edit">
-                <!-- Cart Items -->
-                <ul class="cart-items">
-                    <li class="cart-item">
-                        <label class="hide-label" for="item1">Select Hanging Arm Lamp</label>
-                        <input type="checkbox" id="item1" checked>
-                        <img src="images/hanging-arm-lamp.png" alt="Hanging Arm Lamp">
-                        <div class="item-info">
-                            <h2>Hanging Arm Lamp</h2>
-                            <p>6 inch diameter white conical shade hanging arm lamp attached to a sleek, metallic silver-toned arm and body.</p>
-                        </div>
-                        <div class="quantity">
-                            <label class="hide-label" for="quantity1">Quantity</label>
-                            <input type="number" id="quantity1" value="1" min="1">
-                        </div>
-                        <div class="price">$49.95</div>
-                        <button class="remove-item" type="button">X</button>
-                    </li>
-
-                    <li class="cart-item">
-                        <label class="hide-label" for="item2">Select Earthenware Crockery</label>
-                        <input type="checkbox" id="item2" checked>
-                        <img src="images/earthenware-crockery.png" alt="Earthenware Crockery">
-                        <div class="item-info">
-                            <h2>Earthenware Crockery</h2>
-                            <p>Ceramic earthenware crockery set featuring vibrant cobalt blue glaze with speckled earthy tones, including cups and plates with smooth, rounded edges.</p>
-                        </div>
-                        <div class="quantity">
-                            <label class="hide-label" for="quantity2">Quantity</label>
-                            <input type="number" id="quantity2" value="1" min="1">
-                        </div>
-                        <div class="price">$49.95</div>
-                        <button class="remove-item" type="button">X</button>
-                    </li>
-
-                    <li class="cart-item">
-                        <label class="hide-label" for="item3">Select Lipstick</label>
-                        <input type="checkbox" id="item3" checked>
-                        <img src="images/lip.png" alt="Lipstick">
-                        <div class="item-info">
-                            <h2>Lipstick</h2>
-                            <p>A moisturizing satin lipstick that nourishes the lips with creamy lip color for a well-hydrated look.</p>
-                        </div>
-                        <div class="quantity">
-                            <label class="hide-label" for="quantity3">Quantity</label>
-                            <input type="number" id="quantity3" value="1" min="1">
-                        </div>
-                        <div class="price">$45.00</div>
-                        <button class="remove-item" type="button">X</button>
-                    </li>
+                <!-- Cart Items will be dynamically loaded here -->
+                <ul class="cart-items" id="cart-items">
+                    <!-- Cart items will be inserted here dynamically by JavaScript -->
                 </ul>
                 
                 <!-- Cart Actions -->
                 <div class="cart-actions">
                     <label for="selectAll-btn" class="hide-label"> Select all</label>
-					<input type="button" value="Select All" id="selectAll-btn">
+                    <input type="button" value="Select All" id="selectAll-btn">
                     <label for="removeAll-btn" class="hide-label"> Remove all </label>
-					<input type="reset" value="Remove All" id="removeAll-btn">
+                    <input type="reset" value="Remove All" id="removeAll-btn">
                 </div>
             </section>
         </fieldset>
@@ -102,10 +56,10 @@
         <aside class="summary">
             <h2>Summary</h2> 
             <div class="summary-details">
-                <p>Sub Total: $99.90</p>
+                <p>Sub Total: <span id="sub-total">$0.00</span></p>
                 <p>Delivery Fee: $20.00</p> 
                 <hr>
-                <p><strong>Total: $164.90</strong></p>
+                <p><strong>Total: <span id="total">$0.00</span></strong></p>
             </div>
             <input type="submit" value="Checkout" class="checkout">
         </aside>
@@ -123,6 +77,72 @@
         <p>&copy; 2024 IT312</p>
     </div>
 </footer>
+<script>
+// Retrieve cart data from localStorage
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+// Function to update the cart display
+function updateCartDisplay() {
+    const cartItemsContainer = document.getElementById('cart-items');
+    let total = 0;  // Total price
+
+    // Clear any existing items
+    cartItemsContainer.innerHTML = '';
+
+    // Loop through each item in the cart and create HTML for it
+    cart.forEach(item => {
+        const li = document.createElement('li');
+        li.classList.add('cart-item');
+
+        // Calculate the total price
+        total += item.price * item.quantity;
+
+        // Create item HTML structure
+        li.innerHTML = `
+            <label class="hide-label" for="${item.id}">Select ${item.name}</label>
+            <input type="checkbox" id="${item.id}" checked>
+            <!-- Dynamically add the image -->
+            <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+            <div class="item-info">
+                <h2>${item.name}</h2>
+                <!-- Dynamically add the description -->
+                <p>${item.description}</p>
+            </div>
+            <div class="quantity">
+                <label class="hide-label" for="quantity-${item.id}">Quantity</label>
+                <input type="number" id="quantity-${item.id}" value="${item.quantity}" min="1">
+            </div>
+            <div class="price">$${(item.price * item.quantity).toFixed(2)}</div>
+            <button class="remove-item" type="button" onclick="removeFromCart('${item.id}')">X</button>
+        `;
+
+        // Append item to the cart
+        cartItemsContainer.appendChild(li);
+    });
+
+    // Update the summary
+    document.getElementById('sub-total').innerText = `$${total.toFixed(2)}`;
+    document.getElementById('total').innerText = `$${(total + 20).toFixed(2)}`;  // Adding the delivery fee
+}
+
+// Function to remove an item from the cart
+function removeFromCart(itemId) {
+    // Remove item from the cart array
+    cart = cart.filter(item => item.id !== itemId);
+
+    // Save the updated cart to localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    // Update the cart display
+    updateCartDisplay();
+}
+
+// Initial call to update the cart display when the page loads
+updateCartDisplay();
+
+
+</script>
 
 </body>
 </html>
+

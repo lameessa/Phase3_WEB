@@ -21,7 +21,9 @@
             <a href="CustomerPage.html" class="oval-button">Customer</a>
             <a href="SellerPage.html" class="oval-button">Seller</a>
             <a href="HomePage.html"><img src="images/home.png" class="icon" alt="Home"></a>
-            <a href="CartPage.html"><img src="images/cart.png" class="icon" alt="Cart"></a>
+            <a href="CartPage.html" id="cartButton">
+                <img src="images/cart.png" class="icon" alt="Cart">
+            </a>
         </div>
     </nav>
     <!--Breadcrumbs-->
@@ -42,159 +44,152 @@
                 <option value="Z-A">Name: Z-A</option>
             </optgroup>
         </select>
-    </div>
-    <ul class="itemList">
+
+
+    <!-- Product List -->
+    <ul class="itemList" id="itemList">
+        <!-- Product 1 -->
         <li class="item">
+            <input type="checkbox" id="item11-checkbox">
             <img src="images/s2802163-main-zoom.webp" alt="Lip balm">
             <h3>Summer Fridays Lip Butter Balm for Hydration & Shine</h3>
             <div class="price">$24.00</div>
             <div class="quantity">
-                <div>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-                <label for="item11" class="hide-label">Quantity</label>
-                <input type="number" value="1" min="1" id="item11">
+                <button class="decrease" data-id="item11">-</button>
+                <input type="number" value="1" min="1" id="item11-quantity">
+                <button class="increase" data-id="item11">+</button>
             </div>
-            <div>
-                <p>Provides intense hydration with a glossy finish for soft, supple lips.</p>
-            </div>
+            <p>Provides intense hydration with a glossy finish for soft, supple lips.</p>
         </li>
+        
+        <!-- Product 2 -->
         <li class="item">
+            <input type="checkbox" id="item12-checkbox">
             <img src="images/s2712867-main-zoom.webp" alt="Liquid Blush">
             <h3>Rare Beauty by Selena Gomez Mini Soft Pinch Liquid Blush</h3>
             <div class="price">$14.00</div>
             <div class="quantity">
-                <div>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-                <label for="item12" class="hide-label">Quantity</label>
-                <input type="number" value="1" min="1" id="item12">
+                <button class="decrease" data-id="item12">-</button>
+                <input type="number" value="1" min="1" id="item12-quantity">
+                <button class="increase" data-id="item12">+</button>
             </div>
-            <div>
-                <p>Long-lasting liquid blush that gives a soft, natural flush to the cheeks.</p>
-            </div>
+            <p>Long-lasting liquid blush that gives a soft, natural flush to the cheeks.</p>
         </li>
+
+        <!-- Product 3 -->
         <li class="item">
-            <img src="images/s2742567-main-zoom.webp" alt="Crème & Powder Blush Duo">
+            <input type="checkbox" id="item13-checkbox">
+            <img src="images/s2742567-main-zoom.webp" alt="Blush Duo">
             <h3>Major Headlines Double-Take Crème & Powder Blush Duo</h3>
             <div class="price">$38.00</div>
             <div class="quantity">
-                <div>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-                <label for="item13" class="hide-label">Quantity</label>
-                <input type="number" value="1" min="1" id="item13">
+                <button class="decrease" data-id="item13">-</button>
+                <input type="number" value="1" min="1" id="item13-quantity">
+                <button class="increase" data-id="item13">+</button>
             </div>
-            <div>
-                <p>A versatile blush duo that includes both cream and powder for customizable color.</p>
-            </div>
+            <p>A versatile blush duo that includes both cream and powder for customizable color.</p>
         </li>
+
+        <!-- Product 4 -->
         <li class="item">
+            <input type="checkbox" id="item14-checkbox">
             <img src="images/s2518934-main-zoom.webp" alt="Bronzer Stick">
             <h3>Warm Wishes Effortless Cream Bronzer Stick</h3>
             <div class="price">$26.00</div>
             <div class="quantity">
-                <div>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-                <label for="item14" class="hide-label">Quantity</label>
-                <input type="number" value="1" min="1" id="item14">
+                <button class="decrease" data-id="item14">-</button>
+                <input type="number" value="1" min="1" id="item14-quantity">
+                <button class="increase" data-id="item14">+</button>
             </div>
-            <div>
-                <p>A cream bronzer stick that blends easily for a natural sun-kissed glow.</p>
-            </div>
+            <p>A cream bronzer stick that blends easily for a natural sun-kissed glow.</p>
         </li>
+
+        <!-- Product 5 -->
         <li class="item">
+            <input type="checkbox" id="item15-checkbox">
             <img src="images/s2245363-main-zoom.webp" alt="Concealer">
             <h3>Mini Radiant Creamy Concealer with Medium Coverage</h3>
             <div class="price">$15.00</div>
             <div class="quantity">
-                <div>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-                <label for="item15" class="hide-label">Quantity</label>
-                <input type="number" value="1" min="1" id="item15">
+                <button class="decrease" data-id="item15">-</button>
+                <input type="number" value="1" min="1" id="item15-quantity">
+                <button class="increase" data-id="item15">+</button>
             </div>
-            <div>
-                <p>Provides creamy, medium coverage to conceal imperfections and brighten the under-eye area.</p>
-            </div>
+            <p>Provides creamy, medium coverage to conceal imperfections and brighten the under-eye area.</p>
         </li>
+
+        <!-- Product 6 -->
         <li class="item">
+            <input type="checkbox" id="item16-checkbox">
             <img src="images/s2739415-main-zoom.webp" alt="Setting Powder">
             <h3>Easy Bake Loose Baking & Setting Powder</h3>
             <div class="price">$38.00</div>
             <div class="quantity">
-                <div>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-                <label for="item16" class="hide-label">Quantity</label>
-                <input type="number" value="1" min="1" id="item16">
+                <button class="decrease" data-id="item16">-</button>
+                <input type="number" value="1" min="1" id="item16-quantity">
+                <button class="increase" data-id="item16">+</button>
             </div>
-            <div>
-                <p>Translucent setting powder that helps to set makeup for a flawless finish.</p>
-            </div>
+            <p>Translucent setting powder that helps to set makeup for a flawless finish.</p>
         </li>
+
+        <!-- Product 7 -->
         <li class="item">
+            <input type="checkbox" id="item17-checkbox">
             <img src="images/s2368439-main-zoom.webp" alt="Setting Spray">
             <h3>Airbrush Flawless Waterproof Setting Spray</h3>
             <div class="price">$38.00</div>
             <div class="quantity">
-                <div>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-                <label for="item17" class="hide-label">Quantity</label>
-                <input type="number" value="1" min="1" id="item17">
+                <button class="decrease" data-id="item17">-</button>
+                <input type="number" value="1" min="1" id="item17-quantity">
+                <button class="increase" data-id="item17">+</button>
             </div>
-            <div>
-                <p>Weightless setting spray that locks in makeup and gives a long-lasting finish.</p>
-            </div>
+            <p>Weightless setting spray that locks in makeup and gives a long-lasting finish.</p>
         </li>
+
+        <!-- Product 8 -->
         <li class="item">
+            <input type="checkbox" id="item18-checkbox">
             <img src="images/s2753788-main-zoom.webp" alt="Liquid Bronzer">
             <h3>Dew Bronze Soft-Focus Sculpting Liquid Bronzer</h3>
             <div class="price">$25.00</div>
             <div class="quantity">
-                <div>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-                <label for="item18" class="hide-label">Quantity</label>
-                <input type="number" value="1" min="1" id="item18">
+                <button class="decrease" data-id="item18">-</button>
+                <input type="number" value="1" min="1" id="item18-quantity">
+                <button class="increase" data-id="item18">+</button>
             </div>
-            <div>
-                <p>A liquid bronzer that adds a soft-focus effect and natural warmth to the skin.</p>
-            </div>
+            <p>A liquid bronzer that adds a soft-focus effect and natural warmth to the skin.</p>
         </li>
+
+        <!-- Product 9 -->
         <li class="item">
+            <input type="checkbox" id="item19-checkbox">
             <img src="images/s2816551-main-zoom.webp" alt="Lip Oil">
             <h3>Honey Infused Hydrating Lip Oil</h3>
             <div class="price">$28.00</div>
             <div class="quantity">
-                <div>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-                <label for="item19" class="hide-label">Quantity</label>
-                <input type="number" value="1" min="1" id="item19">
+                <button class="decrease" data-id="item19">-</button>
+                <input type="number" value="1" min="1" id="item19-quantity">
+                <button class="increase" data-id="item19">+</button>
             </div>
-            <div>
-                <p>Hydrating lip oil infused with honey for soft and luscious lips.</p>
-            </div>
+            <p>Hydrating lip oil infused with honey for soft and luscious lips.</p>
         </li>
+
+        <!-- Product 10 -->
         <li class="item">
+            <input type="checkbox" id="item20-checkbox">
             <img src="images/s2801652-main-zoom.webp" alt="Face Palette">
             <h3>DIOR BACKSTAGE Glow Face Palette</h3>
-            <div class="price">$48.00</div>
+            <div class="price">$49.00</div>
             <div class="quantity">
-                <div>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-                <label for="item20" class="hide-label">Quantity</label>
-                <input type="number" value="1" min="1" id="item20">
+                <button class="decrease" data-id="item20">-</button>
+                <input type="number" value="1" min="1" id="item20-quantity">
+                <button class="increase" data-id="item20">+</button>
             </div>
-            <div>
-                <p>A multi-use face palette that delivers a luminous glow for face and eyes.</p>
-            </div>
+            <p>Glow face palette with highlighter, bronzer, and blush for a radiant complexion.</p>
         </li>
     </ul>
+
+    <button id="addToCartButton">Add Selected Items to Cart</button>
 </main>
 <footer>
     <div class="contact-info">
@@ -206,5 +201,132 @@
         <p>&copy; 2024 IT312</p>
     </div>
 </footer>
+<script>
+// Initialize cart from localStorage
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+
+// Handle Quantity Increase
+function increaseQuantity(productId) {
+    const quantityInput = document.getElementById(`${productId}-quantity`);
+    let quantity = parseInt(quantityInput.value);
+    quantityInput.value = quantity + 1;
+}
+
+// Handle Quantity Decrease
+function decreaseQuantity(productId) {
+    const quantityInput = document.getElementById(`${productId}-quantity`);
+    let quantity = parseInt(quantityInput.value);
+    if (quantity > 1) {
+        quantityInput.value = quantity - 1;
+    }
+}
+
+// Handle Add to Cart for selected items
+function addToCart() {
+    // Loop through each item in the list
+    document.querySelectorAll('.item').forEach(item => {
+        const checkbox = item.querySelector('input[type="checkbox"]');
+        if (checkbox.checked) {
+            const productId = item.querySelector('.decrease').getAttribute('data-id');
+            const quantity = parseInt(document.getElementById(`${productId}-quantity`).value);
+            const name = item.querySelector('h3').innerText;
+            const price = parseFloat(item.querySelector('.price').innerText.replace('$', ''));
+            const description = item.querySelector('p').innerText;
+            const image = item.querySelector('img').src;  // Get image source URL
+
+            // Check if item is already in cart
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const existingItemIndex = cart.findIndex(product => product.id === productId);
+
+            if (existingItemIndex !== -1) {
+                cart[existingItemIndex].quantity += quantity;  // Update quantity if item exists
+            } else {
+                cart.push({
+                    id: productId,
+                    name: name,
+                    price: price,
+                    quantity: quantity,
+                    description: description,  // Store description
+                    image: image  // Store image URL
+                });
+            }
+
+            // Save updated cart to localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Reset quantity to 1 and uncheck the checkbox after adding to cart
+            document.getElementById(`${productId}-quantity`).value = 1;  // Reset quantity to 1
+            checkbox.checked = false;  // Uncheck the checkbox
+        }
+    });
+}
+
+
+// Sort Products by Name or Price
+function sortProducts() {
+    const sortValue = document.getElementById('sort').value;
+    const items = Array.from(document.querySelectorAll('.item'));
+
+    if (sortValue === 'low-to-high') {
+        // Sort by Price: Low to High
+        items.sort((a, b) => {
+            const priceA = parseFloat(a.querySelector('.price').innerText.replace('$', ''));
+            const priceB = parseFloat(b.querySelector('.price').innerText.replace('$', ''));
+            return priceA - priceB;
+        });
+    } else if (sortValue === 'high-to-low') {
+        // Sort by Price: High to Low
+        items.sort((a, b) => {
+            const priceA = parseFloat(a.querySelector('.price').innerText.replace('$', ''));
+            const priceB = parseFloat(b.querySelector('.price').innerText.replace('$', ''));
+            return priceB - priceA;
+        });
+    } else if (sortValue === 'A-Z') {
+        // Sort by Name: A-Z
+        items.sort((a, b) => {
+            const nameA = a.querySelector('h3').innerText.toLowerCase();
+            const nameB = b.querySelector('h3').innerText.toLowerCase();
+            return nameA.localeCompare(nameB);
+        });
+    } else if (sortValue === 'Z-A') {
+        // Sort by Name: Z-A
+        items.sort((a, b) => {
+            const nameA = a.querySelector('h3').innerText.toLowerCase();
+            const nameB = b.querySelector('h3').innerText.toLowerCase();
+            return nameB.localeCompare(nameA);
+        });
+    }
+
+    // Append sorted items back to the list
+    const itemList = document.querySelector('.itemList');
+    itemList.innerHTML = '';
+    items.forEach(item => itemList.appendChild(item));
+}
+
+// Event Listener for Sort Dropdown
+document.getElementById('sort').addEventListener('change', sortProducts);
+
+// Event Listener for Add to Cart button
+document.getElementById('addToCartButton').addEventListener('click', addToCart);
+
+// Event Listeners for Quantity and Checkbox
+document.querySelectorAll('.increase').forEach(button => {
+    button.addEventListener('click', () => {
+        increaseQuantity(button.getAttribute('data-id'));
+    });
+});
+
+document.querySelectorAll('.decrease').forEach(button => {
+    button.addEventListener('click', () => {
+        decreaseQuantity(button.getAttribute('data-id'));
+    });
+});
+
+
+</script>
+
+
+
 </body>
 </html>
