@@ -1580,7 +1580,7 @@ body.dark-mode .icon {
 /* Sections */
 body.dark-mode #Homemain .vision-section,
 body.dark-mode #AddProductOffer,
-
+body.dark-mode #dashboard,
 body.dark-mode #Homemain .offers-container,
 body.dark-mode #Homemain .reviews-container,
 body.dark-mode #Homemain .categories,
@@ -1592,6 +1592,7 @@ body.dark-mode #Homemain .reviews {
 
 
 body.dark-mode #Homemain .vision-content h1, 
+body.dark-mode #dashboard,
 body.dark-mode #Homemain .vision-content p {
     color: #bbbbbb;
 }
