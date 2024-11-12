@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,8 +43,8 @@
 
     <section class="products-container">
         <h3>Seller's products:</h3>
-        <div class="products-wrapper" id="products-wrapper">
-            <!-- Products will be displayed here if they are found in local storage -->
+        <div class="products-wrapper" id="product-list">
+          
         </div>
         <p id="no-products-msg" style="display: none;">No products available. Please add a new product.</p>
 
@@ -69,83 +68,35 @@
 </footer>
 
 <script>
-    // Retrieve products from local storage
-    const products = JSON.parse(localStorage.getItem('sellerProducts')) || [];
-    const productsWrapper = document.getElementById('products-wrapper');
-    const noProductsMsg = document.getElementById('no-products-msg');
+    document.addEventListener("DOMContentLoaded", () => {
+      
+        const productList = document.getElementById("product-list");
 
-    if (products.length > 0) {
-        // If products exist, display them
-        products.forEach(product => {
-            const productDiv = document.createElement('div');
-            productDiv.classList.add('product');
-            productDiv.innerHTML = `
-                <img src="${product.image}" alt="${product.name}">
-                <h4>${product.name}</h4>
-                <p>${product.description}</p>
-                <p>Quantity: ${product.quantity}</p>
-                <p>Price: ${product.price}$</p>
-            `;
-            productsWrapper.appendChild(productDiv);
-        });
-    } else {
-        // If no products, show the "no products" message
-        noProductsMsg.style.display = 'block';
-    }
+   
+        let products = JSON.parse(localStorage.getItem("products")) || [];
+
+ 
+        if (products.length > 0) {
+            products.forEach((product) => {
+              
+                const productItem = document.createElement("div");
+                productItem.classList.add("product");
+                productItem.innerHTML = `
+                    <img src="${product.imageUrl || 'default-image.png'}" alt="${product.name}">
+                    <h4>${product.name}</h4>
+                    <p>${product.description}</p>
+                    <p>Quantity: ${product.numItems}</p>
+                    <p>Price: $${product.price.toFixed(2)}</p>
+                `;
+           
+                productList.appendChild(productItem);
+            });
+        } else {
+           
+            document.getElementById("no-products-msg").style.display = 'block';
+        }
+    });
 </script>
 
-<script>
-    function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
-
-    // Save user preference to localStorage
-    const isDarkMode = document.body.classList.contains("dark-mode");
-    localStorage.setItem("darkMode", isDarkMode);
-
-    // Change the vision section image based on the mode
-    const visionImage = document.querySelector(".vision-image img");
-    visionImage.src = isDarkMode ? "images/Image-1 2.png" : "images/vision.png";
-}
-
-// Load Dark Mode preference on page load
-document.addEventListener("DOMContentLoaded", () => {
-    const isDarkMode = localStorage.getItem("darkMode") === "true";
-    
-    if (isDarkMode) {
-        document.body.classList.add("dark-mode");
-        document.getElementById("darkModeToggle").checked = true;
-        
-        // Set the dark mode image on page load if dark mode is enabled
-        const visionImage = document.querySelector(".vision-image img");
-        visionImage.src = "images/Image-1 2.png";
-    } else {
-        const visionImage = document.querySelector(".vision-image img");
-        visionImage.src = "images/vision.png";
-    }
-});
-
-// Function to get the start of the current week (Sunday)
-function getWeekStartDate() {
-    const now = new Date();
-    const dayOfWeek = now.getDay(); // 0 is Sunday, 1 is Monday, etc.
-    const weekStart = new Date(now); // Copy the current date
-
-    // Calculate the difference to get back to Sunday
-    weekStart.setDate(now.getDate() - dayOfWeek);
-
-    // Format the date as "Day DD Month, YYYY"
-    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    return weekStart.toLocaleDateString('en-SA', options);
-}
-
-// Display the date at the beginning of the homepage
-document.addEventListener("DOMContentLoaded", () => {
-    const dateElement = document.querySelector(".week-start-date");
-    dateElement.textContent = `This week's start date: ${getWeekStartDate()}`;
-});
-
-
-</script>
 </body>
 </html>
-
