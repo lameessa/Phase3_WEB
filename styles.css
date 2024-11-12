@@ -1603,7 +1603,8 @@ body.dark-mode div.product{
 body.dark-mode #Homemain .vision-content h1, 
 body.dark-mode #dashboard,
 body.dark-mode #orderp
-body.dark-mode #Homemain .vision-content p {
+body.dark-mode #Homemain .vision-content p 
+{
     color: #bbbbbb;
 }
 
@@ -1663,7 +1664,7 @@ body.dark-mode footer .copyright {
 }
 
 /* Dark theme styles */
-body.dark-mode .week-start-date {
+body.dark-mode .week-start-date,body.dark-mode #Homemain .offers-container  {
     color: #dddddd; /* Light text for dark theme */
     background-color: #121212; /* Dark background for dark theme */
 }
