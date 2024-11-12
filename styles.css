@@ -1580,6 +1580,7 @@ body.dark-mode .icon {
 body.dark-mode #Homemain .vision-section,
 body.dark-mode #AddProductOffer,
 body.dark-mode #dashboard,
+body.dark-mode #orderp
 body.dark-mode #Homemain .offers-container,
 body.dark-mode #Homemain .reviews-container,
 body.dark-mode #Homemain .categories,
@@ -1592,7 +1593,8 @@ body.dark-mode #Homemain .reviews {
 body.dark-mode div.offers-wrapper,
 body.dark-mode div.container,
 body.dark-mode div.shipping-details,
-body.dark-mode div.order-summary{
+body.dark-mode div.order-summary,
+body.dark-mode div.product{
     background-color: #222222 !important;
 }
 
@@ -1600,6 +1602,7 @@ body.dark-mode div.order-summary{
 
 body.dark-mode #Homemain .vision-content h1, 
 body.dark-mode #dashboard,
+body.dark-mode #orderp
 body.dark-mode #Homemain .vision-content p {
     color: #bbbbbb;
 }
