@@ -118,7 +118,7 @@ nav {
     
    }
    
-   #Homemain .vision-section {border-top: 0.3em solid #323232; }
+   #Homemain .vision-section {border-top: 0.1em solid #323232; }
    #Homemain .vision-content p{
        font-family:'Trebuchet MS', sans-serif; 
  color: #333;
@@ -195,7 +195,7 @@ nav {
        object-fit: cover;
    }
    #Homemain .review-item .rating {
-       color: #ff6b6b; /* Gold stars */
+    color: #FFD700; /* Gold stars */
        font-size: 1.2em;
        text-align: left;
        margin-bottom: 1.25em;
@@ -1635,3 +1635,21 @@ body.dark-mode footer .contact-info p,
 body.dark-mode footer .copyright {
     color: #aaaaaa;
 }
+/* Default light theme styles */
+.week-start-date {
+    font-size: 1.2em;
+    color: #333333; /* Dark text for light theme */
+    background-color: #DDD0C8; /* Light background for light theme */
+    padding: 20px 20px;
+    border-top: 0.1em solid #323232; 
+    text-align: center;
+    font-weight: bold;
+    
+}
+
+/* Dark theme styles */
+body.dark-mode .week-start-date {
+    color: #dddddd; /* Light text for dark theme */
+    background-color: #121212; /* Dark background for dark theme */
+}
+

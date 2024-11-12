@@ -40,7 +40,8 @@
             </div>
     </nav>
     
-        
+    <div class="week-start-date"></div>
+
         
         
          </header>
@@ -226,6 +227,27 @@ document.addEventListener("DOMContentLoaded", () => {
         visionImage.src = "images/vision.png";
     }
 });
+
+// Function to get the start of the current week (Sunday)
+function getWeekStartDate() {
+    const now = new Date();
+    const dayOfWeek = now.getDay(); // 0 is Sunday, 1 is Monday, etc.
+    const weekStart = new Date(now); // Copy the current date
+
+    // Calculate the difference to get back to Sunday
+    weekStart.setDate(now.getDate() - dayOfWeek);
+
+    // Format the date as "Day DD Month, YYYY"
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    return weekStart.toLocaleDateString('en-SA', options);
+}
+
+// Display the date at the beginning of the homepage
+document.addEventListener("DOMContentLoaded", () => {
+    const dateElement = document.querySelector(".week-start-date");
+    dateElement.textContent = `This week's start date: ${getWeekStartDate()}`;
+});
+
 
 </script>
 
