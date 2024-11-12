@@ -1484,3 +1484,154 @@ footer .copyright {
 
         display: none;
     }
+
+
+    .floating-toggle-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 60px;
+    height: 30px;
+}
+
+/* Hide the checkbox input */
+.floating-toggle-container input[type="checkbox"] {
+    display: none;
+}
+
+/* Toggle label styling as the background slider */
+.toggle-label {
+    display: block;
+    background-color: #333333;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.3s ease;
+}
+
+/* Toggle switch knob */
+.toggle-label::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transition: 0.3s;
+    box-shadow: 0 0.125em 0.312em rgba(0, 0, 0, 0.5);
+}
+
+/* Icon styling */
+.toggle-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1em;
+    pointer-events: none;
+    transition: color 0.3s ease;
+}
+
+.moon-icon {
+    left: 8px;
+    color: #FFD700;
+}
+
+.sun-icon {
+    right: 8px;
+    color: #cccccc;
+}
+
+/* Change background and icon color when checked (dark mode) */
+input[type="checkbox"]:checked + .toggle-label {
+    background-color: #555555;
+}
+
+input[type="checkbox"]:checked + .toggle-label::after {
+    transform: translateX(30px);
+}
+
+input[type="checkbox"]:checked + .toggle-label .moon-icon {
+    color: #cccccc;
+}
+
+input[type="checkbox"]:checked + .toggle-label .sun-icon {
+    color: #FFD700;
+}
+
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .oval-button {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+body.dark-mode .icon {
+    filter: brightness(0.8);
+}
+
+/* Sections */
+body.dark-mode #Homemain .vision-section,
+body.dark-mode #Homemain .offers-container,
+body.dark-mode #Homemain .reviews-container,
+body.dark-mode #Homemain .categories,
+body.dark-mode #Homemain .category-container, 
+body.dark-mode #Homemain .reviews {
+    background-color: #121212;
+    color: #dddddd;
+}
+
+body.dark-mode #Homemain .vision-content h1, 
+body.dark-mode #Homemain .vision-content p {
+    color: #bbbbbb;
+}
+
+/* Offer Items */
+body.dark-mode #Homemain .offer-item {
+    background-color: #222222; 
+    color: #dddddd;
+    border: 1px solid #444444;
+    box-shadow: 0 0.125em 0.312em rgba(0, 0, 0, 0.5);
+}
+
+/* Category Items */
+body.dark-mode #Homemain .category {
+    background-color: #222222;
+    color: #dddddd;
+    box-shadow: 0 0.125em 0.312em rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode #Homemain .review-item h3, 
+body.dark-mode #Homemain .category p {
+    color: #ffffff;
+}
+
+/* Reviews Section */
+body.dark-mode #Homemain .review-item {
+    background-color: #222222; 
+    color: #dddddd;
+    border: 1px solid #444444;
+}
+
+body.dark-mode #Homemain .review-item .rating {
+    color: #FFD700; /* Gold color for stars */
+}
+
+/* Footer */
+body.dark-mode #Homemain footer {
+    background-color: #1e1e1e;
+    color: #cccccc;
+}
+
+body.dark-mode footer .contact-info p,
+body.dark-mode footer .copyright {
+    color: #aaaaaa;
+}
