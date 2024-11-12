@@ -1590,6 +1590,11 @@ body.dark-mode #Homemain .reviews {
     color: #dddddd;
 }
 
+body.dark-mode div.offers-wrapper{
+    background-color: #222222 !important;
+}
+
+
 
 body.dark-mode #Homemain .vision-content h1, 
 body.dark-mode #dashboard,
