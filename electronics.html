@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Electronics | Lumina</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -19,7 +20,7 @@
         </div>
         <div class="header-icons">
             <a href="CustomerPage.html" class="oval-button">Customer</a>
-				<a href="SellerPage.html" class="oval-button">Seller</a>
+            <a href="SellerPage.html" class="oval-button">Seller</a>
             <a href="HomePage.html"><img src="images/home.png" class="icon" alt="Home"></a>
             <a href="CartPage.html"><img src="images/cart.png" class="icon" alt="Cart"></a>
         </div>
@@ -43,171 +44,269 @@
             </optgroup>
         </select>
     </div>
-    <ul class="itemList">
-        <li class="item">
+
+    <ul class="itemList" id="itemList">
+        <!-- Item 1 -->
+        <li class="item" data-price="150" data-name="Tecno Spark 20 Pro 5G" data-id="1">
             <img src="images/item1.jpg" alt="Tecno Spark">
             <h3>Tecno Spark 20 Pro 5G</h3>
             <div class="price">$150.00</div>
             <div class="quantity">
+                <button class="quantity-btn minus" data-id="1">-</button>
+                <input type="number" value="1" min="1" id="item1" class="quantity-input">
+                <button class="quantity-btn plus" data-id="1">+</button>
                 <div>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="add-to-cart" data-id="1">Add to Cart</button>
                 </div>
-                <label for="item1" class="hide-label">Quantity</label>
-                <input type="number" value="1" min="1" id="item1">
             </div>
             <div class="cat-des">
                 <p>Experience fast performance and stunning visuals with the Tecno Spark 20 Pro 5G, designed for multitasking and gaming.</p>
             </div>
         </li>
-        <li class="item">
+
+        <!-- Item 2 -->
+        <li class="item" data-price="170" data-name="NUHEARA IQ Buds Earbuds" data-id="2">
             <img src="images/item2.jpg" alt="Earbuds">
             <h3>NUHEARA IQ Buds Earbuds</h3>
             <div class="price">$170.00</div>
             <div class="quantity">
+                <button class="quantity-btn minus" data-id="2">-</button>
+                <input type="number" value="1" min="1" id="item2" class="quantity-input">
+                <button class="quantity-btn plus" data-id="2">+</button>
                 <div>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="add-to-cart" data-id="2">Add to Cart</button>
                 </div>
-                <label for="item2" class="hide-label">Quantity</label>
-                <input type="number" value="1" min="1" id="item2">
             </div>
-            <div>
-                <p>Wireless earbuds that adapt to your environment, delivering exceptional sound quality with noise control.</p>
-            </div>
+            <p>Wireless earbuds that adapt to your environment, delivering exceptional sound quality with noise control.</p>
         </li>
-        <li class="item">
+
+        <!-- Item 3 -->
+        <li class="item" data-price="120" data-name="Wireless Eufy S330 (eufyCam 3) Add-on Camera" data-id="3">
             <img src="images/fe1583cb1d8384b52622fc637266643f07c03129_636169.jpg" alt="Wireless camera">
             <h3>Wireless Eufy S330 (eufyCam 3) Add-on Camera</h3>
             <div class="price">$120.00</div>
             <div class="quantity">
+                <button class="quantity-btn minus" data-id="3">-</button>
+                <input type="number" value="1" min="1" id="item3" class="quantity-input">
+                <button class="quantity-btn plus" data-id="3">+</button>
                 <div>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="add-to-cart" data-id="3">Add to Cart</button>
                 </div>
-                <label for="item3" class="hide-label">Quantity</label>
-                <input type="number" value="1" min="1" id="item3">
             </div>
-            <div>
-                <p>Enhance your security system with the Eufy S330 camera, featuring high-definition video and night vision capabilities.</p>
-            </div>
+            <p>Enhance your security system with the Eufy S330 camera, featuring high-definition video and night vision capabilities.</p>
         </li>
-        <li class="item">
+
+        <!-- Item 4 -->
+        <li class="item" data-price="100" data-name="Brydge 12.3 Pro+ Keyboard" data-id="4">
             <img src="images/f3fc0a646370870e5ca0078b19b86fdd769cf039_574441.jpg" alt="Brydge Keyboard">
             <h3>Brydge 12.3 Pro+ Keyboard</h3>
             <div class="price">$100.00</div>
             <div class="quantity">
+                <button class="quantity-btn minus" data-id="4">-</button>
+                <input type="number" value="1" min="1" id="item4" class="quantity-input">
+                <button class="quantity-btn plus" data-id="4">+</button>
                 <div>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="add-to-cart" data-id="4">Add to Cart</button>
                 </div>
-                <label for="item4" class="hide-label">Quantity</label>
-                <input type="number" value="1" min="1" id="item4">
             </div>
-            <div>
-                <p>Transform your tablet into a laptop with the Brydge 12.3 Pro+ Keyboard, offering a comfortable typing experience.</p>
-            </div>
+            <p>Transform your tablet into a laptop with the Brydge 12.3 Pro+ Keyboard, offering a comfortable typing experience.</p>
         </li>
-        <li class="item">
+
+        <!-- Item 5 -->
+        <li class="item" data-price="199" data-name="Huawei CD23 SE Mouse" data-id="5">
             <img src="images/da6a07e3c9d696a80655fda2dec021c354e4ae88_642297.jpg" alt="Huawei Mouse">
             <h3>Huawei CD23 SE Mouse</h3>
             <div class="price">$199.00</div>
             <div class="quantity">
+                <button class="quantity-btn minus" data-id="5">-</button>
+                <input type="number" value="1" min="1" id="item5" class="quantity-input">
+                <button class="quantity-btn plus" data-id="5">+</button>
                 <div>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="add-to-cart" data-id="5">Add to Cart</button>
                 </div>
-                <label for="item5" class="hide-label">Quantity</label>
-                <input type="number" value="1" min="1" id="item5">
             </div>
-            <div>
-                <p>Enjoy precision and comfort with the Huawei CD23 SE Mouse, perfect for gaming and productivity.</p>
-            </div>
+            <p>Enjoy precision and comfort with the Huawei CD23 SE Mouse, perfect for gaming and productivity.</p>
         </li>
-        <li class="item">
+
+        <!-- Item 6 -->
+        <li class="item" data-price="130" data-name="Apple Pencil 2nd Gen iPad Stylus" data-id="6">
             <img src="images/516647.jpg" alt="Apple Pencil">
             <h3>Apple Pencil 2nd Gen iPad Stylus</h3>
             <div class="price">$130.00</div>
             <div class="quantity">
+                <button class="quantity-btn minus" data-id="6">-</button>
+                <input type="number" value="1" min="1" id="item6" class="quantity-input">
+                <button class="quantity-btn plus" data-id="6">+</button>
                 <div>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="add-to-cart" data-id="6">Add to Cart</button>
                 </div>
-                <label for="item6" class="hide-label">Quantity</label>
-                <input type="number" value="1" min="1" id="item6">
             </div>
-            <div>
-                <p>Enhance your creativity with the Apple Pencil 2nd Gen, offering precision and responsiveness for digital art.</p>
-            </div>
+            <p>Enhance your creativity with the Apple Pencil 2nd Gen, offering precision and responsiveness for digital art.</p>
         </li>
-        <li class="item">
+
+        <!-- Item 7 -->
+        <li class="item" data-price="1299" data-name="Apple iPhone 15 Pro Max" data-id="7">
             <img src="images/9718fb4c46ee6395505e3d14c0498a4746c7c13c_623657.jpg" alt="Apple iPhone 15 Pro Max">
             <h3>Apple iPhone 15 Pro Max</h3>
             <div class="price">$1299.00</div>
             <div class="quantity">
+                <button class="quantity-btn minus" data-id="7">-</button>
+                <input type="number" value="1" min="1" id="item7" class="quantity-input">
+                <button class="quantity-btn plus" data-id="7">+</button>
                 <div>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="add-to-cart" data-id="7">Add to Cart</button>
                 </div>
-                <label for="item7" class="hide-label">Quantity</label>
-                <input type="number" value="1" min="1" id="item7">
             </div>
-            <div>
-                <p>Discover groundbreaking performance and stunning design with the Apple iPhone 15 Pro Max, your ultimate smartphone.</p>
-            </div>
+            <p>The latest iPhone with advanced features, including a stunning OLED display, improved camera, and A17 chip.</p>
         </li>
-        <li class="item">
+
+        <!-- Item 8 -->
+        <li class="item" data-price="115" data-name="Apple MagSafe Smartphone Battery Pack" data-id="8">
             <img src="images/566993.jpg" alt="Smartphone Battery Pack">
             <h3>Apple MagSafe Smartphone Battery Pack</h3>
             <div class="price">$115.00</div>
             <div class="quantity">
+                <button class="quantity-btn minus" data-id="8">-</button>
+                <input type="number" value="1" min="1" id="item8" class="quantity-input">
+                <button class="quantity-btn plus" data-id="8">+</button>
                 <div>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="add-to-cart" data-id="8">Add to Cart</button>
                 </div>
-                <label for="item8" class="hide-label">Quantity</label>
-                <input type="number" value="1" min="1" id="item8">
             </div>
-            <div>
-                <p>Keep your phone charged on the go with the Apple MagSafe Battery Pack, designed for easy attachment and optimal performance.</p>
-            </div>
+            <p>Keep your phone charged on the go with the Apple MagSafe Battery Pack, designed for easy attachment and optimal performance.</p>
         </li>
-        <li class="item">
-            <img src="images/b29f5b911c5ab5ad0be5e5e51f0c8dd1a0284939_630773.jpg" alt="HP Spectre x360 2-in-1 Laptop">
+
+        <!-- Item 9 -->
+        <li class="item" data-price="2199" data-name="HP Spectre x360 2-in-1 Laptop - Convertible" data-id="9">
+            <img src="images/b29f5b911c5ab5ad0be5e5e51f0c8dd1a0284939_630773.jpg" alt="HP Spectre x360 Laptop">
             <h3>HP Spectre x360 2-in-1 Laptop - Convertible</h3>
             <div class="price">$2199.00</div>
             <div class="quantity">
+                <button class="quantity-btn minus" data-id="9">-</button>
+                <input type="number" value="1" min="1" id="item9" class="quantity-input">
+                <button class="quantity-btn plus" data-id="9">+</button>
                 <div>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="add-to-cart" data-id="9">Add to Cart</button>
                 </div>
-                <label for="item9" class="hide-label">Quantity</label>
-                <input type="number" value="1" min="1" id="item9">
             </div>
-            <div>
-                <p>Unleash your productivity and creativity with the HP Spectre x360, a versatile 2-in-1 laptop with premium features.</p>
-            </div>
+            <p>Unleash your productivity and creativity with the HP Spectre x360, a versatile 2-in-1 laptop with premium features.</p>
         </li>
-        <li class="item">
+
+        <!-- Item 10 -->
+        <li class="item" data-price="1299" data-name="TCL 65&quot; Smart TV" data-id="10">
             <img src="images/bd7bc840a0e743d287b05ee7883ef4c52b85a9e7_638487.jpg" alt="Smart TV">
             <h3>TCL 65&quot; Smart TV</h3>
             <div class="price">$1299.00</div>
             <div class="quantity">
+                <button class="quantity-btn minus" data-id="10">-</button>
+                <input type="number" value="1" min="1" id="item10" class="quantity-input">
+                <button class="quantity-btn plus" data-id="10">+</button>
                 <div>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="add-to-cart" data-id="10">Add to Cart</button>
                 </div>
-                <label for="item10" class="hide-label">Quantity</label>
-                <input type="number" value="1" min="1" id="item10">
             </div>
-            <div>
-                <p>Experience cinematic quality at home with the TCL 65&quot; Smart TV, featuring vibrant colors and smart capabilities.</p>
-            </div>
+            <p>Experience cinematic quality at home with the TCL 65&quot; Smart TV, featuring vibrant colors and smart capabilities.</p>
         </li>
-        
-            
-            
     </ul>
 </main>
-<footer>
-    <div class="contact-info">
-        <p>Contact Us</p>
-        <p><img src="images/instagram.png" alt="instagram">@Lumina</p>
-        <p><img src="images/x.png" alt="x">@Lumina</p>
-    </div>
-    <div class="copyright">
-        <p>&copy; 2024 IT312</p>
-    </div>
-</footer>
+
+<script>
+// Initialize cart from localStorage
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+// Function to handle "+" and "-" buttons to adjust quantity
+function updateQuantity(productId, action) {
+    const quantityInput = document.getElementById(`item${productId}`);
+    let currentQuantity = parseInt(quantityInput.value);
+
+    if (action === 'increase') {
+        currentQuantity += 1;
+    } else if (action === 'decrease' && currentQuantity > 1) {
+        currentQuantity -= 1;
+    }
+
+    quantityInput.value = currentQuantity;
+}
+
+// Function to handle "Add to Cart" for each item
+function addToCart(productId) {
+    const item = document.querySelector(`.item[data-id="${productId}"]`);
+    const quantity = parseInt(document.getElementById(`item${productId}`).value);
+    const name = item.querySelector('h3').innerText;
+    const price = parseFloat(item.querySelector('.price').innerText.replace('$', ''));
+    const description = item.querySelector('p').innerText;
+    const image = item.querySelector('img').src;
+
+    // Check if item is already in cart
+    const existingItemIndex = cart.findIndex(product => product.id === productId);
+
+    if (existingItemIndex !== -1) {
+        // Update quantity if item exists
+        cart[existingItemIndex].quantity += quantity;
+    } else {
+        // Add new item to cart
+        cart.push({
+            id: productId,
+            name: name,
+            price: price,
+            quantity: quantity,
+            description: description,
+            image: image
+        });
+    }
+
+    // Save updated cart to localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    // Reset quantity to 1 after adding to cart
+    document.getElementById(`item${productId}`).value = 1;
+}
+
+// Event listener for "+" and "-" buttons
+document.querySelectorAll('.quantity-btn.plus').forEach(button => {
+    button.addEventListener('click', (e) => {
+        const productId = e.target.getAttribute('data-id');
+        updateQuantity(productId, 'increase');
+    });
+});
+
+document.querySelectorAll('.quantity-btn.minus').forEach(button => {
+    button.addEventListener('click', (e) => {
+        const productId = e.target.getAttribute('data-id');
+        updateQuantity(productId, 'decrease');
+    });
+});
+
+// Event listener for "Add to Cart" buttons
+document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', (e) => {
+        const productId = e.target.getAttribute('data-id');
+        addToCart(productId);
+    });
+});
+
+// Sorting function
+document.getElementById('sort').addEventListener('change', (e) => {
+    const sortValue = e.target.value;
+    const itemsList = document.getElementById('itemList');
+    const items = Array.from(itemsList.querySelectorAll('.item'));
+
+    if (sortValue === 'low-to-high') {
+        items.sort((a, b) => parseFloat(a.querySelector('.price').textContent.replace('$', '')) - parseFloat(b.querySelector('.price').textContent.replace('$', '')));
+    } else if (sortValue === 'high-to-low') {
+        items.sort((a, b) => parseFloat(b.querySelector('.price').textContent.replace('$', '')) - parseFloat(a.querySelector('.price').textContent.replace('$', '')));
+    } else if (sortValue === 'A-Z') {
+        items.sort((a, b) => a.querySelector('h3').textContent.localeCompare(b.querySelector('h3').textContent));
+    } else if (sortValue === 'Z-A') {
+        items.sort((a, b) => b.querySelector('h3').textContent.localeCompare(a.querySelector('h3').textContent));
+    }
+
+    // Clear and re-add sorted items
+    itemsList.innerHTML = '';
+    items.forEach(item => itemsList.appendChild(item));
+});
+</script>
+
 </body>
 </html>
+
