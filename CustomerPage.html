@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Customer page</title>
+    <title>Customer Page</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,9 +20,9 @@
             </div>
             <div class="header-icons">
                 <a href="CustomerPage.html" class="oval-button">Customer</a>
-                    <a href="SellerPage.html" class="oval-button">Seller</a>
+                <a href="SellerPage.html" class="oval-button">Seller</a>
                 <a href="HomePage.html"><img src="images/home.png" class="icon" alt="Home"></a>
-                <a href="CartPage.html"><img src="images/cart.png" class="icon" alt="Cart"></a>
+                <a href="CartPage.html" id="my-cart"><img src="images/cart.png" class="icon" alt="Cart"></a>
             </div>
         </nav>
 
@@ -36,19 +36,18 @@
         <!-- User Information -->
         <h1>Hello, Customer!</h1> 
 
-            <div class="profile">
-                <div class="user-info">
-                    <div class="UserIcon"> 
-                        <img src="images/avatar.png" alt="avatar" class="avatar">
-                       </div>
-                    <div class="UserContact">
-                        <p>Jane Smith</p>
-                        <p>Jane1@gmail.com</p>
-                    </div>
+        <div class="profile">
+            <div class="user-info">
+                <div class="UserIcon"> 
+                    <img src="images/avatar.png" alt="avatar" class="avatar">
+                </div>
+                <div class="UserContact">
+                    <p>Jane Smith</p>
+                    <p>Jane1@gmail.com</p>
                 </div>
             </div>
-            <hr>
-       
+        </div>
+        <hr>
 
         <!-- Customer Options -->
         <section class="customer-options">
@@ -69,50 +68,54 @@
             <button class="arrow-left">&#8249;</button>
             <h2>Recommended for you</h2>
             <div class="Recommended-container">
+                <!-- Recommended Item 1 -->
                 <div class="recommended-item">
                     <img src="images/Recommended1.png" alt="lip balm"> 
                     <div class="item-details">
-                        <span class="item-name"> Summer Fridays<br>lip balm</span>
-                        <span class="item-price">10$</span>
+                        <span class="item-name">Summer Fridays<br>lip balm</span>
+                        <span class="item-price" data-price="10">10$</span>
                     </div>
                     <div class="quantity"> 
                         <button class="addToCart">Add to cart</button>
-					<label for="quantity-lipbalm" class="hide-label">Quantity</label>
-						<input type="number" id="quantity-lipbalm" value="1" min="1">
+                        <label for="quantity-lipbalm" class="hide-label">Quantity</label>
+                        <input type="number" id="quantity-lipbalm" value="1" min="1">
                     </div>
                 </div>
-                
+
+                <!-- Recommended Item 2 -->
                 <div class="recommended-item">
                     <img src="images/DecorCatg.png" alt="cactus"> 
                     <div class="item-details">
-                        <span class="item-name"> Potted cactus </span>
-                        <span class="item-price">7$</span>
+                        <span class="item-name">Potted cactus</span>
+                        <span class="item-price" data-price="7">7$</span>
                     </div>
                     <div class="quantity">						
                         <button class="addToCart">Add to cart</button>
                         <label for="quantity-cactus" class="hide-label">Quantity</label>
-						<input type="number" id="quantity-cactus" value="1" min="1">
+                        <input type="number" id="quantity-cactus" value="1" min="1">
                     </div>
                 </div>
-        
+                
+                <!-- Recommended Item 3 -->
                 <div class="recommended-item">
                     <img src="images/Recommended3.png" alt="eye shadow"> 
                     <div class="item-details">
-                        <span class="item-name"> Eyeshadow Pallet</span>
-                        <span class="item-price">20$</span>
+                        <span class="item-name">Eyeshadow Palette</span>
+                        <span class="item-price" data-price="20">20$</span>
                     </div>
                     <div class="quantity">
                         <button class="addToCart">Add to cart</button>
                         <label for="quantity-eyeshadow" class="hide-label">Quantity</label>
-						<input type="number" id="quantity-eyeshadow" value="1" min="1">
+                        <input type="number" id="quantity-eyeshadow" value="1" min="1">
                     </div>
                 </div>
         
+                <!-- Recommended Item 4 -->
                 <div class="recommended-item">
                     <img src="images/offer6.png" alt="Webcam"> 
                     <div class="item-details">
-                        <span class="item-name"> Webcam </span>
-                        <span class="item-price">40$</span>
+                        <span class="item-name">Webcam</span>
+                        <span class="item-price" data-price="40">40$</span>
                     </div>
                     <div class="quantity">
                         <button class="addToCart">Add to cart</button>
@@ -123,9 +126,6 @@
             </div>
             <button class="arrow-right">&#8250;</button>
         </section>
-        
-       
-
     </main>
 
     <footer>
@@ -138,5 +138,47 @@
             <p>&copy; 2024 IT312</p>
         </div>
     </footer>
+
+    <!-- Embedded JavaScript for cart functionality -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            function updateLocalStorage() {
+                localStorage.setItem("cart", JSON.stringify(cart));
+            }
+
+            // Add to cart functionality
+            document.querySelectorAll(".addToCart").forEach((button) => {
+                button.addEventListener("click", (event) => {
+                    const item = event.target.closest(".recommended-item");
+                    const name = item.querySelector(".item-name").textContent.trim();
+                    const price = parseFloat(item.querySelector(".item-price").dataset.price);
+                    const quantity = parseInt(item.querySelector("input[type='number']").value);
+                    const imageSrc = item.querySelector("img").src; // الحصول على مسار الصورة
+
+                    // Check if item is already in cart
+                    const existingItem = cart.find((product) => product.name === name);
+                    if (existingItem) {
+                        existingItem.quantity += quantity;
+                    } else {
+                        cart.push({ name, price, quantity, imageSrc }); // إضافة الصورة إلى البيانات
+                    }
+
+                    updateLocalStorage();
+                    alert(`${name} has been added to the cart.`);
+                });
+            });
+
+            // Redirect to cart page and store cart in localStorage
+            document.getElementById("my-cart").addEventListener("click", (event) => {
+                updateLocalStorage();
+                window.location.href = "CartPage.html";
+            });
+        });
+    </script>
 </body>
 </html>
+
+
+
