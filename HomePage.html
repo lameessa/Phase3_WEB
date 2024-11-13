@@ -61,7 +61,6 @@
     <section class="offers">
 
         <h2>Offers</h2>
-        <button class="arrow-left">&#8249;</button>
         <div class="offers-container">
             <div class="offer-item"> 
                 <h3>Special Price Lip Gloss Set!</h3>
@@ -80,12 +79,13 @@
                 <img src="images/offer3.png" alt="tableware">
                 <p>Buy one, get second free tableware.</p> 
             </div>
+            <div class="additional-offers hidden">
             <div class="offer-item">
                 <h3>3 For The Price Of 2!</h3>
                 <img src="images/offer4.png" alt="Vase">
                 <p>3pcs Beige Ceramic Vase for the price of 2!</p> 
             </div>
-
+            
             <div class="offer-item">
                 <h3>FULL MakeUp Set</h3>
                 <img src="images/offer5.png" alt="Make-up set">
@@ -97,9 +97,12 @@
                 <img src="images/offer6.png" alt="Webcam">
                 <p>Webcam with Conference Speaker and Microphone</p> 
             </div>
+            </div>
         </div>
-        <button class="arrow-right">&#8250;</button>
-
+       
+        <div class="more-button-container">
+            <button id="toggleOffersButton" class="more-button">More</button>
+        </div>
     </section>
 
     <section class="categories">
@@ -125,7 +128,6 @@
 
     <section class="reviews">
         <h2>Customer Reviews</h2>
-        <button class="arrow-left">&#8249;</button>
         <div class="reviews-container">
             <!-- Repeat for each review -->
             <div class="review-item">
@@ -137,16 +139,38 @@
                     <p>delivery is fast but the product is decent</p>
 					<img src="images/TISSUE.png" alt="customer review">
 					</div>
+
+                    <div class="hover-info">
+                        <h4>Munnera Abdullah</h4>
+                        <div class="rating">
+                            &#9733;&#9733;&#9733;&#9733;&#9734; <!-- 4 out of 5 stars -->
+                        </div>
+                        <p><b>Khaki Tissue-box decoration</b></p>
+                        
+                        <p>delivery is fast but the product is decent</p>
+                    </div>
                 </div>            
         <div class="review-item">
                 <div class="review-details">
                     <h3>Nintendo Switch</h3>
                     <div class="rating">
-                        &#9733;&#9733;&#9733;&#9733;&#9733;                    </div>
+                        &#9733;&#9733;&#9733;&#9733;&#9733;       
+                  </div>
                         <p>Fantastic service! And even more fantastic Nintendo switch!</p>
                         <img src="images/rev2.png" alt="customer review">
 
-                    </div>            </div>
+                    </div>   
+                    <div class="hover-info">
+                        <h4>Mohammad Adel</h4>
+                        <div class="rating">
+                            &#9733;&#9733;&#9733;&#9733;&#9733; 
+                                                </div>
+                        <p><b>Nintendo Switch</b></p>
+                        
+                        <p>Fantastic service! And even more fantastic Nintendo switch!</p>
+                    </div>    
+                    
+                    </div>
                     <div class="review-item">
                 <div class="review-details">
                     <h3>Laneige-lip Sleeping Mask</h3>
@@ -155,7 +179,18 @@
                         <p>Very impressed, Highly recommended!</p>
                         <img src="images/rev3.png" alt="customer review">
 
-                    </div>            </div>
+                    </div>          
+                    <div class="hover-info">
+                        <h4>Wedad Saleh</h4>
+                        <div class="rating">
+                            &#9733;&#9733;&#9733;&#9734;&#9734;                                                 </div>
+                        <p><b>Laneige-lip Sleeping Mask</b></p>
+                        
+                        <p>Very impressed, Highly recommended!</p>
+                    </div>    
+                    
+                    
+                  </div>
                     <div class="review-item">
                         <div class="review-details">
                             <h3>Auto-Focus 48MP 4K Digital Camera</h3>
@@ -164,7 +199,16 @@
                             </div>
                             <p>Amazing camera! Great quality and fast delivery.</p>
 							<img src="images/cam.png" alt="customer review">
-                        </div>            </div>
+                        </div>        
+                        <div class="hover-info">
+                            <h4>Ahmad turki</h4>
+                            <div class="rating">
+                                &#9733;&#9733;&#9734;&#9734;&#9734;                                                 </div>
+                            <p><b>Auto-Focus 48MP 4K Digital Camera</b></p>
+                            
+                            <p>Amazing camera! Great quality and fast delivery.</p>
+                        </div>  
+                        </div>
                         
                     <div class="review-item">
                         <div class="review-details">
@@ -174,10 +218,18 @@
                                 <p>I love this set! Looks great as a part of my fall decoration</p>
                                 <img src="images/rev6.png" alt="customer review">
         
-                            </div>            </div> 
+                            </div>     
+                            <div class="hover-info">
+                                <h4>JHessah Hamad</h4>
+                                <div class="rating">
+                                    &#9733;&#9733;&#9733;&#9733;&#9734;                                                 </div>
+                                <p><b>Flower vase set</b></p>
+                                
+                                <p>I love this set! Looks great as a part of my fall decoration</p>
+                            </div> 
+                               </div> 
                     
         </div>
-        <button class="arrow-right">&#8250;</button>
     </section>
 </main>
 <footer>
@@ -246,6 +298,24 @@ function getWeekStartDate() {
 document.addEventListener("DOMContentLoaded", () => {
     const dateElement = document.querySelector(".week-start-date");
     dateElement.textContent = `This week's start date: ${getWeekStartDate()}`;
+});
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const toggleButton = document.getElementById("toggleOffersButton");
+    const additionalOffers = document.querySelector(".additional-offers");
+
+    toggleButton.addEventListener("click", () => {
+        additionalOffers.classList.toggle("hidden");
+
+        // Change the button text based on the state
+        if (additionalOffers.classList.contains("hidden")) {
+            toggleButton.textContent = "More";
+        } else {
+            toggleButton.textContent = "Less";
+        }
+    });
 });
 
 

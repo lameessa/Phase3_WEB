@@ -12,7 +12,8 @@ body {
 
     color:#323232;	
 	
-	background-color:#f5f5f5}
+	background-color:#f5f5f5;
+    overflow-x: hidden;}
 
 nav {
 
@@ -142,48 +143,7 @@ nav {
    
        text-align: left;
    }
-   #Homemain .review-item h3, #Homemain .review-item .rating {
-       margin-bottom: 0.3125em;
-       font-size: 1.2em;
-       color: #333;
-   }
-   #Homemain .review-item p {
-       text-align: left;
-       width: 100%;
-   }
-   #Homemain .reviews-container {
-       width: 90em;
-       display: flex;
-       flex-direction: row;
-       justify-content: space-around;
-       flex-wrap: nowrap;
-       background-color: #F0F0F0; 
-
-   }
-   #Homemain .review-item {
-       padding: 1.25em;
-       border: 0.0625em solid #ccc;
-       border-radius: 8px;
-       width: 30em ; 
-       background-color: #FFFFFF;
-       box-shadow: 0 0.125em 0.312em rgba(0, 0, 0, 0.1);
-       margin:1.25em;
-   } 
-
-  
-   
-   #Homemain .reviews {
-       width: 92em; /* Adjust width as necessary */
-       background-color: #F0F0F0; 
-       padding: 1.25em;
-       position: relative;
-
  
-   }
-   #Homemain h2, #CustomerMain h2 {
-       text-align: center;
-       margin-bottom: 1.25em;
-   }
 
 
    #Homemain .review-item img {
@@ -217,31 +177,7 @@ nav {
 
 }
 
-#Homemain .offers-container {
-   
-   display: flex;
-   justify-content:space-between;
-   padding: 1.25em;
-   flex-wrap: nowrap;
-   background-color: #F0F0F0; 
-overflow-x: hidden;
-}
 
-#Homemain .offer-item {
-   width: 100%;
-   padding: 1.25em;
-   border: 0.0625em solid #ccc;
-   border-radius: 0.5em;
-   text-align: center;
-   box-shadow: 0 0.125em 0.312em rgba(0, 0, 0, 0.1);
-   margin: 0.590em;
-   background-color: #FFFFFF;
-}
-
-#Homemain .offer-item img {
-   max-width: 9.375em; 
-   max-height: 6.5em;
-}
 
 #Homemain .category-container {
    display: flex;
@@ -1667,4 +1603,255 @@ body.dark-mode footer .copyright {
 body.dark-mode .week-start-date,body.dark-mode #Homemain .offers-container  {
     color: #dddddd; /* Light text for dark theme */
     background-color: #121212; /* Dark background for dark theme */
+}
+
+#Homemain .offers {
+    padding: 20px;
+    position: relative;
+}
+
+
+ 
+
+#Homemain .offers-container {
+    display: flex;
+    flex-wrap: wrap; /* Ensure the first 4 items are in one line */
+    gap: 20px; /* Space between offer items */
+    overflow: hidden; /* Hide any items beyond the visible row */
+    background-color: #F0F0F0; /* Light theme background */
+    justify-content: space-around;
+    justify-items: center;
+
+}
+
+#Homemain .additional-offers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+     justify-content: space-around;
+    overflow: hidden;
+    padding: 20px;
+
+
+}
+
+/* Ensure hidden section is initially not visible */
+#Homemain .additional-offers.hidden {
+    display: none;
+}
+
+#Homemain .offer-item {
+    width: calc(25% - 20px);
+    background-color: #FFFFFF; /* Light theme background */
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#Homemain .offer-item img {
+    max-width: 9.375em; 
+    max-height: 6.5em;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* "More" button container */
+#Homemain .more-button-container {
+    text-align: right;
+    margin-top: 20px;
+}
+#Homemain .more-button {
+    background-color: #333333; /* Light theme button background */
+    color: #ffffff; /* Light theme button text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#Homemain .more-button:hover {
+    background-color: #555555; /* Button hover effect */
+}
+
+/* Dark mode styles */
+body.dark-mode #Homemain .offers-container {
+    background-color: #121212; /* Dark theme background */
+}
+
+body.dark-mode #Homemain .offer-item {
+    background-color: #222222; /* Dark theme item background */
+    color: #dddddd; /* Light text for dark theme */
+    border: 1px solid #444444;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode #Homemain .offer-item img {
+    filter: brightness(0.9); /* Slightly dimmed images for dark mode */
+}
+
+body.dark-mode #Homemain .more-button {
+    background-color: #555555; /* Dark theme button background */
+    color: #dddddd; /* Dark theme button text color */
+}
+body.dark-mode #Homemain .more-button:hover {
+    background-color: #777777; /* Button hover effect for dark theme */
+}
+
+/* Reviews Container */
+#Homemain .reviews-container {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+padding: 3%;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin-right: 20px;
+}
+
+/* Review Item */
+#Homemain .review-item {
+    position: relative; /* Needed for hover positioning */
+    width: 90%; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: left; /* Align text to the left */
+    cursor: pointer;
+}
+
+/* Review Details (Default View) */
+#Homemain .review-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#Homemain .review-details h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin: 20px;
+    margin-bottom: 0;
+}
+
+#Homemain .review-details .rating {
+    font-size: 1.2em;
+    margin: 5px;
+margin-left: 20px;
+    color: #FFD700; /* Gold stars */
+}
+
+#Homemain .review-details p {
+    font-size: 0.9em;
+    color: #666;
+    margin: 10px 10px;
+}
+
+#Homemain .review-details img {
+    width: 10.625em;
+    height: 9.375em;
+    border-radius: 5px;
+    object-fit: cover;
+    align-self: center;
+    margin: 0.625em;
+
+
+}
+
+/* Hover Info (Hidden by Default) */
+#Homemain .hover-info {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 90%;
+    background-color: #fff; /* Dark overlay */
+    color: black; /* Light text */
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 10;
+    text-align: left; /* Align hover text to the left */
+}
+
+/* Hover Content */
+#Homemain .hover-info h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+#Homemain .hover-info p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    line-height: 1.5em; /* Improve readability */
+    color: black;
+    text-align: left;
+    box-sizing: content-box;
+    word-wrap: break-word;
+
+}
+
+#Homemain .hover-info .rating {
+    font-size: 1.2em;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+/* Display Hover Info on Hover */
+#Homemain .review-item:hover .hover-info {
+    display: block; /* Show hover-info on hover */
+
+}
+
+/* Align Name on the Left */
+#Homemain .hover-info h4 {
+    text-align: left; /* Ensure name aligns left */
+    margin: 0 0 10px 0;
+    font-weight: bold;
+}
+
+/* Optional: Animation for Smooth Display */
+#Homemain .hover-info {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#Homemain .review-item:hover .hover-info {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Dark Mode Styling */
+body.dark-mode #Homemain .review-item {
+    background-color: #222222;
+    border: 1px solid #444444;
+}
+
+body.dark-mode #Homemain .review-details h3,
+body.dark-mode #Homemain .review-details p {
+    color: #dddddd;
+}
+
+body.dark-mode #Homemain .hover-info {
+    background-color: #222222;
+    color: #dddddd;
+}
+
+body.dark-mode #Homemain .hover-info h4,
+body.dark-mode #Homemain .hover-info  p
+ {
+    color: #dddddd;
+}
+
+
+#Homemain h2, #CustomerMain h2 {
+    text-align: center;
+    margin-bottom: 1.25em;
 }
