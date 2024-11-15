@@ -273,17 +273,6 @@ nav {
 }
 
 
-.arrow-left, .arrow-right{
-   position: absolute;
-   top: 60%;
-   transform: translateY(-50%);
-   background-color: transparent;
-   border: none;
-   cursor: pointer;
-   font-size: 1.5em;
-}
-.arrow-left { left: 0em; }
-.arrow-right { right: 0em; }
 
 
 .user-info {
@@ -327,10 +316,7 @@ nav {
    margin-top: 0.625em;
 }
 
-#CustomerMain .quantity button,
-#CustomerMain .quantity input {
-   margin: 0 0.3125em;
-}
+
 
 .Recommended-container{
    display: flex;
@@ -355,10 +341,8 @@ nav {
 
 .recommended-item{
    padding: 1.25em;
-   border: 1px solid #ccc;
    border-radius: 0.5em;
    text-align: center;
-   box-shadow: 0 0.125em 0.312em rgba(0, 0, 0, 0.1);
    margin: 0.625em;
    background-color: #FFFFFF;
    position: relative;
@@ -425,18 +409,19 @@ display: inline;
    height: 1.7em;
    padding: 0;
 }
-.recommendations .plusMinus{
+.recommendations button{
    width: 2.3em;
-   height:2em;
+   height:1.9em;
       border: 1px solid #ccc;
-
 }
 
 .recommendations .addToCart{
-	color:#fff;
-	background-color:#323232;
+
    width: 100%;
       height:2em;
+	  color:#fff;
+	  background-color:#323232;
+	  border:none;
 
 }
 .recommendations .addToCart:hover {background-color: #555;}
@@ -828,11 +813,9 @@ height:15em;}
 	width: 1.5em;
 }
 .review .rating-stars button {
-opacity:0.6;
 	background-color:#fafafa;
 	border:0;}
 	
-.rating-stars button:hover{opacity:1;}
 
 #review-submit {
     padding: 1em 0;
@@ -1829,28 +1812,49 @@ margin-left: 20px;
 }
 
 /* Dark Mode Styling */
-body.dark-mode #Homemain .review-item {
+/* Dark Mode Styling */
+body.dark-mode #Homemain .review-item,
+body.dark-mode .cart .cart-item ,
+body.dark-mode .review fieldset
+ {
     background-color: #222222;
     border: 1px solid #444444;
 }
 
-body.dark-mode #Homemain .review-details h3,
-body.dark-mode #Homemain .review-details p {
+body.dark-mode .cart .review-details h3,
+body.dark-mode .cart .review-details p,
+body.dark-mode .cart .item-info h2,
+body.dark-mode .cart .item-info p,
+body.dark-mode .dashboard h2,
+body.dark-mode .cart .price ,
+body.dark-mode #CustomerMain .customer-options h2,
+body.dark-mode .review{
     color: #dddddd;
 }
 
-body.dark-mode #Homemain .hover-info {
+body.dark-mode .cart .hover-info,
+body.dark-mode .cart .summary ,
+body.dark-mode #CustomerMain .recommended-item ,
+body.dark-mode .review{
     background-color: #222222;
     color: #dddddd;
 }
 
-body.dark-mode #Homemain .hover-info h4,
-body.dark-mode #Homemain .hover-info  p
- {
+body.dark-mode .cart .hover-info h4,
+body.dark-mode .cart .hover-info p,
+body.dark-mode .cart .summary h2,
+body.dark-mode .cart .summary-details p,
+body.dark-mode .cart .remove-item ,
+body.dark-mode .orderp h2 ,
+body.dark-mode .orderp .item-info ,
+body.dark-mode #CustomerMain ,
+body.dark-mode .review {
     color: #dddddd;
 }
-
-
+body.dark-mode .review .rating-stars button {
+	background-color:#222222;
+	border:0;}
+/* Center-align headers in dark mode on both Home and Cart pages */
 #Homemain h2, #CustomerMain h2 {
     text-align: center;
     margin-bottom: 1.25em;
