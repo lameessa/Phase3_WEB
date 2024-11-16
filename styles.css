@@ -807,7 +807,7 @@ height:15em;}
     font-size: 2em;
     color: #999;
 }
-
+.review .upload-box:hover{background-color:#E6F7FF;}
 .review .rating-stars img {
     height: 1.5em;
 	width: 1.5em;
