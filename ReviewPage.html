@@ -88,55 +88,8 @@
             <p>&copy; 2024 IT312</p>
         </div>
     </footer>
-<script>
-// Set rating and update star visibility
-function setRating(score) {
-    document.getElementById("rating").value = score;
-    const stars = document.querySelectorAll(".rating-stars button img");
-    stars.forEach((star, index) => {
-        star.style.opacity = index < score ? "1" : "0.5";
-    });
-}
+   <script src="Scripts/ReviewScript.js"></script>
 
-// Handle form submission
-document.getElementById("review-form").addEventListener("submit", function(event) {
-    event.preventDefault();
-
-    const orderSelect = document.getElementById("list-order-rev");
-    const rating = document.getElementById("rating").value;
-    const productSelect = document.getElementById("product-select");
-    const selectedOrder = orderSelect.options[orderSelect.selectedIndex].text;
-    const selectedProduct = productSelect.options[productSelect.selectedIndex].text;
-
-    // Check if order and rating are selected
-    if (orderSelect.value === "" || rating === "") {
-        alert("Please select an order and provide a rating.");
-        return;
-    }
-
-    // Display feedback message
-    alert(`Thank you for your feedback!\nYour rating for ${selectedProduct} is ${rating}.`);
-
-    // Redirect to HomePage.html
-    window.location.href = "HomePage.html";
-});
-
-// Dark mode toggle
-document.addEventListener("DOMContentLoaded", () => {
-    const darkModeToggle = document.getElementById("darkModeToggle");
-    const isDarkMode = localStorage.getItem("darkMode") === "true";
-    
-    if (isDarkMode) {
-        document.body.classList.add("dark-mode");
-        darkModeToggle.checked = true;
-    }
-
-    darkModeToggle.addEventListener("change", () => {
-        document.body.classList.toggle("dark-mode");
-        localStorage.setItem("darkMode", darkModeToggle.checked);
-    });
-});
-</script>
 </body>
 </html>
 

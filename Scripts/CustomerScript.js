@@ -5,10 +5,11 @@
         localStorage.setItem("cart", JSON.stringify(cart));
     }
 
-    // Add to cart functionality
+    // Add to cart 
     document.querySelectorAll(".addToCart").forEach((button) => {
-        button.addEventListener("click", (event) => {
-            const item = event.target.closest(".recommended-item");
+    button.addEventListener("click", (event) => {
+            
+			const item = event.target.closest(".recommended-item");
             const name = item.querySelector(".item-name").textContent.trim();
             const price = parseFloat(item.querySelector(".item-price").dataset.price);
             const quantityInput = item.querySelector(".quantity-input");
@@ -16,45 +17,38 @@
             const description = item.querySelector(".item-details p").textContent.trim();
             const image = item.querySelector("img").src;
 
-            // Check if item is already in cart
+            //if item is already in cart
             const existingItem = cart.find((product) => product.name === name);
             if (existingItem) {
-                existingItem.quantity += quantity;
-            } else {
-                cart.push({ name, price, quantity, description, image });
-            }
-
+                existingItem.quantity += quantity;            } 
+			else {
+                cart.push({ name, price, quantity, description, image });           }
             updateLocalStorage();
-            alert(`Product has been added to the cart.`);
+            alert(`${name} has been added to the cart.`);
+            quantityInput.value = 1;       });   });             // reset quantity 
 
-            // Reset quantity to 1
-            quantityInput.value = 1;
-        });
-    });
-
-    // Quantity adjustment buttons
+    // quan 
     document.querySelectorAll(".quantity-btn.plus").forEach((button) => {
-        button.addEventListener("click", (event) => {
-            const quantityInput = event.target.parentNode.querySelector(".quantity-input");
-            quantityInput.value = parseInt(quantityInput.value) + 1;
-        });
+    button.addEventListener("click", (event) => {
+    const quantityInput = event.target.parentNode.querySelector(".quantity-input");
+    quantityInput.value = parseInt(quantityInput.value) + 1;        });
     });
 
     document.querySelectorAll(".quantity-btn.minus").forEach((button) => {
-        button.addEventListener("click", (event) => {
-            const quantityInput = event.target.parentNode.querySelector(".quantity-input");
-            quantityInput.value = Math.max(1, parseInt(quantityInput.value) - 1);
-        });
+    button.addEventListener("click", (event) => {
+    const quantityInput = event.target.parentNode.querySelector(".quantity-input");
+    quantityInput.value = Math.max(1, parseInt(quantityInput.value) - 1);       });
     });
 
-    // Redirect to cart page
+
+    // redirect to cart page
     document.getElementById("my-cart").addEventListener("click", (event) => {
-        updateLocalStorage();
-        window.location.href = "CartPage.html";
-    });
+    updateLocalStorage();
+    window.location.href = "CartPage.html";   });
 });
 
-// Load Dark Mode preference on page load
+
+//  Dark Mode 
 document.addEventListener("DOMContentLoaded", () => {
     const isDarkMode = localStorage.getItem("darkMode") === "true";
     

@@ -1859,3 +1859,7 @@ body.dark-mode .review .rating-stars button {
     text-align: center;
     margin-bottom: 1.25em;
 }
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
