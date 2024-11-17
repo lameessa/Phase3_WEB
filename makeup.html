@@ -21,7 +21,7 @@
             <a href="CustomerPage.html" class="oval-button">Customer</a>
             <a href="SellerPage.html" class="oval-button">Seller</a>
             <a href="HomePage.html"><img src="images/home.png" class="icon" alt="Home"></a>
-            <a href="CartPage.html" id="cartButton">
+            <a href="CartPage.html" id="my-cart">
                 <img src="images/cart.png" class="icon" alt="Cart">
             </a>
         </div>
@@ -201,133 +201,8 @@
 </footer>
 
 
-<script>
-// Initialize cart from localStorage
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    <script src="Scripts/CategoriesScript.js"></script>
 
-// Function to handle "+" and "-" buttons to adjust quantity
-function updateQuantity(productId, action) {
-    const quantityInput = document.getElementById(`${productId}-quantity`);
-    let currentQuantity = parseInt(quantityInput.value);
-
-    if (action === 'increase') {
-        currentQuantity += 1;
-    } else if (action === 'decrease' && currentQuantity > 1) {
-        currentQuantity -= 1;
-    }
-
-    quantityInput.value = currentQuantity;
-}
-
-// Function to handle "Add to Cart" for each item
-function addToCart(productId) {
-    const item = document.querySelector(`#${productId}`);
-    const quantity = parseInt(document.getElementById(`${productId}-quantity`).value);
-    const name = item.querySelector('h3').innerText;
-    const price = parseFloat(item.querySelector('.price').innerText.replace('$', ''));
-    const description = item.querySelector('p').innerText;
-    const image = item.querySelector('img').src;
-
-    // Check if item is already in cart
-    const existingItemIndex = cart.findIndex(product => product.id === productId);
-
-    if (existingItemIndex !== -1) {
-        // Update quantity if item exists
-        cart[existingItemIndex].quantity += quantity;
-    } else {
-        // Add new item to cart
-        cart.push({
-            id: productId,
-            name: name,
-            price: price,
-            quantity: quantity,
-            description: description,
-            image: image
-        });
-    }
-
-    // Save updated cart to localStorage
-    localStorage.setItem('cart', JSON.stringify(cart));
-
-    // Reset quantity to 1 after adding to cart
-    document.getElementById(`${productId}-quantity`).value = 1;
-
- // Show alert confirming the product is added
-    alert(`"${name}" has been added to cart`);
-}
-
-// Event listener for "+" and "-" buttons
-document.querySelectorAll('.increase').forEach(button => {
-    button.addEventListener('click', (event) => {
-        const productId = event.target.getAttribute('data-id');
-        updateQuantity(productId, 'increase');
-    });
-});
-
-document.querySelectorAll('.decrease').forEach(button => {
-    button.addEventListener('click', (event) => {
-        const productId = event.target.getAttribute('data-id');
-        updateQuantity(productId, 'decrease');
-    });
-});
-
-// Event listener for Add to Cart buttons
-document.querySelectorAll('.add-to-cart').forEach(button => {
-    button.addEventListener('click', (event) => {
-        const productId = event.target.getAttribute('data-id');
-        addToCart(productId);
-    });
-});
-
-// Sorting function
-document.getElementById('sort').addEventListener('change', (e) => {
-    const sortValue = e.target.value;
-    const itemsList = document.getElementById('itemList');
-    const items = Array.from(itemsList.querySelectorAll('.item'));
-
-    if (sortValue === 'low-to-high') {
-        items.sort((a, b) => parseFloat(a.querySelector('.price').textContent.replace('$', '')) - parseFloat(b.querySelector('.price').textContent.replace('$', '')));
-    } else if (sortValue === 'high-to-low') {
-        items.sort((a, b) => parseFloat(b.querySelector('.price').textContent.replace('$', '')) - parseFloat(a.querySelector('.price').textContent.replace('$', '')));
-    } else if (sortValue === 'A-Z') {
-        items.sort((a, b) => a.querySelector('h3').textContent.localeCompare(b.querySelector('h3').textContent));
-    } else if (sortValue === 'Z-A') {
-        items.sort((a, b) => b.querySelector('h3').textContent.localeCompare(a.querySelector('h3').textContent));
-    }
-
-    // Clear and re-add sorted items
-    itemsList.innerHTML = '';
-    items.forEach(item => itemsList.appendChild(item));
-});
-    function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
-
-    // Save user preference to localStorage
-    const isDarkMode = document.body.classList.contains("dark-mode");
-    localStorage.setItem("darkMode", isDarkMode);
-
-    // Change the vision section image based on the mode
-    const visionImage = document.querySelector(".vision-image img");
-    visionImage.src = isDarkMode ? "images/Image-1 2.png" : "images/vision.png";
-}
-
-// Load Dark Mode preference on page load
-document.addEventListener("DOMContentLoaded", () => {
-    const isDarkMode = localStorage.getItem("darkMode") === "true";
-    
-    if (isDarkMode) {
-        document.body.classList.add("dark-mode");
-        document.getElementById("darkModeToggle").checked = true;
-        
-        // Set the dark mode image on page load if dark mode is enabled
-        const visionImage = document.querySelector(".vision-image img");
-        visionImage.src = "images/Image-1 2.png";
-    } else {
-        const visionImage = document.querySelector(".vision-image img");
-        visionImage.src = "images/vision.png";
-    }
-});
-</script>
 
 </body>
 </html>
