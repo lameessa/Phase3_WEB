@@ -1481,7 +1481,7 @@ body.dark-mode .review .rating-stars button {
 	
     
     #Homemain .offer-item {
-        flex: 0 1 calc(25% - 1.5em);
+        flex: 0 1 calc(20% - 1.5em);
         background-color: #FFFFFF;
         border: 1px solid #ccc;
         border-radius: 5px;
@@ -1512,7 +1512,7 @@ body.dark-mode .review .rating-stars button {
     }
     
     #Homemain .category {
-        flex: 0 1 calc(30% - 1.5em);
+        flex: 0 1 calc(25% - 1.5em);
         position: relative; /* Enables positioning for child elements */
         text-align: left;
         border-radius: 5px;
@@ -1671,7 +1671,8 @@ body.dark-mode .review .rating-stars button {
     body.dark-mode #Homemain .reviews-container,
     body.dark-mode #Homemain .categories,
     body.dark-mode #Homemain .category-container, 
-    body.dark-mode #Homemain .reviews {
+    body.dark-mode #Homemain .reviews, body.dark-mode #Homemain .hover-info
+     {
         background-color: #121212;
         color: #dddddd;
     }
@@ -1689,7 +1690,9 @@ body.dark-mode .review .rating-stars button {
     body.dark-mode #Homemain .vision-content h1, 
     body.dark-mode #dashboard,
     body.dark-mode #orderp
-    body.dark-mode #Homemain .vision-content p 
+    body.dark-mode #Homemain .vision-content p ,
+    body.dark-mode #Homemain .hover-info p , 
+       body.dark-mode #Homemain .review-details p
     {
         color: #bbbbbb;
     }
@@ -1771,72 +1774,18 @@ body.dark-mode .review .rating-stars button {
     #Homemain .additional-offers.hidden {
         display: none;
     }
-    #Homemain .hover-info {
-        display: none; /* Initially hidden */
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 90%;
-        height: 90%;
-        background-color: #fff; /* Dark overlay */
-        color: black; /* Light text */
-        padding: 20px;
-        border-radius: 5px;
-        z-index: 10;
-        text-align: left; /* Align hover text to the left */
-    }
+   
     
-    /* Hover Content */
-    #Homemain .hover-info h4 {
-        font-size: 1.2em;
-        margin-bottom: 10px;
-    }
-    
-    #Homemain .hover-info p {
-        margin: 5px 0;
-        font-size: 0.9em;
-        line-height: 1.5em; /* Improve readability */
-        color: black;
-        text-align: left;
-        box-sizing: content-box;
-        word-wrap: break-word;
-    
-    }
-    
-    #Homemain .hover-info .rating {
-        font-size: 1.2em;
-        color: #FFD700;
-        margin-bottom: 10px;
-    }
+   
     #Homemain .rating {
         font-size: 1.2em;
         color: #FFD700;
         margin-bottom: 10px;
     }
-    /* Display Hover Info on Hover */
-    #Homemain .review-item:hover .hover-info {
-        display: block; /* Show hover-info on hover */
-    
-    }
+  
     
     /* Align Name on the Left */
-    #Homemain .hover-info h4 {
-        text-align: left; /* Ensure name aligns left */
-        margin: 0 0 10px 0;
-        font-weight: bold;
-    }
-    
-    /* Optional: Animation for Smooth Display */
-    #Homemain .hover-info {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.3s ease, transform 0.3s ease;
-    }
-    
-    #Homemain .review-item:hover .hover-info {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  
     /* Reviews Section */
     #Homemain .reviews-container {
         display: flex;
@@ -1850,7 +1799,7 @@ body.dark-mode .review .rating-stars button {
     
     #Homemain .review-item {
         text-align: left;
-    
+        position: relative;
         flex: 0 0 calc(20% - 0.5em); /* Each review takes 20% of the row minus the gap */
         background-color: #ffffff;
         border: 1px solid #ccc;
@@ -1860,10 +1809,34 @@ body.dark-mode .review .rating-stars button {
         font-size: 0.9em; /* Smaller font size for content */
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+   
+    
+    .review-item:hover {
+        transform: scale(1.05); /* Slight zoom effect */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .hover-info {
+        display: none; /* Hidden by default */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 90%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.95); /* Light overlay */
+        color: #333;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: left;
+        z-index: 10;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+    
     
     #Homemain .review-item img {
         max-width: 70%; /* Adjust the size of images */
-        height: auto;
+        max-height: 70%;
         border-radius: 2px;
     
         text-align: center;
@@ -1944,7 +1917,7 @@ body.dark-mode .review .rating-stars button {
         }
     
         #Homemain .review-item {
-            flex: 0 0 calc(20% - 0.5em); /* Ensure all 5 reviews fit in one row */
+            flex: 1 1 calc(40% - 0.5em); /* Ensure all 5 reviews fit in one row */
         }
     
         #Homemain .review-item h4 {
