@@ -934,22 +934,6 @@ margin-bottom:1em;}
 }
 
 
-.ack {background: no-repeat; background-image:url(images/lumina-bg.png);
-background-attachment:scroll;
-background-size:contain;
-background-position:center;
-
-}
-
-.ack .thank-you-message {margin: 15em 0;
-	display:flex;
-	flex-direction:column;
-	justify-content:center;
-	text-align:center;
-	text-shadow: 0.2em 0.2em 0.9em white;
-} 
-
-.ack .thank-you-message a {	color:#323232;}
 footer {
 
     background-color: #323232;
@@ -1268,10 +1252,9 @@ body.dark-mode #Homemain .review-item {
 
 
 body.dark-mode #Homemain .review-item .rating {
-    color: #FFD700; /* Gold color for stars */
+    color: #ff6b6b; 
 }
 
-/* Footer */
 body.dark-mode #Homemain footer {
     background-color: #1e1e1e;
     color: #cccccc;
@@ -1282,14 +1265,11 @@ body.dark-mode footer .copyright {
     color: #aaaaaa;
 }
 
-/* Default light theme styles */
 
 
-/* Dark theme styles */
 body.dark-mode .week-start-date,body.dark-mode #Homemain .offers-container  {
-    color: #dddddd; /* Light text for dark theme */
-    background-color: #121212; /* Dark background for dark theme */
-}
+    color: #dddddd; 
+background-color: #121212; }
 
 
 
@@ -1297,35 +1277,31 @@ body.dark-mode .week-start-date,body.dark-mode #Homemain .offers-container  {
  
 
 
-/* Dark mode styles */
 body.dark-mode #Homemain .offers-container {
-    background-color: #121212; /* Dark theme background */
+    background-color: #121212; 
 }
 
 body.dark-mode #Homemain .offer-item {
-    background-color: #222222; /* Dark theme item background */
-    color: #dddddd; /* Light text for dark theme */
+    background-color: #222222; 
+    color: #dddddd; 
     border: 1px solid #444444;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 body.dark-mode #Homemain .offer-item img {
-    filter: brightness(0.9); /* Slightly dimmed images for dark mode */
+    filter: brightness(0.9); 
 }
 
 body.dark-mode #Homemain .more-button {
-    background-color: #555555; /* Dark theme button background */
-    color: #dddddd; /* Dark theme button text color */
+    background-color: #555555; 
+    color: #dddddd; 
 }
 body.dark-mode #Homemain .more-button:hover {
-    background-color: #777777; /* Button hover effect for dark theme */
+    background-color: #777777; 
 }
 
-/* Reviews Container */
 
 
-/* Dark Mode Styling */
-/* Dark Mode Styling */
 body.dark-mode #Homemain .review-item,
 body.dark-mode .cart .cart-item ,
 body.dark-mode .review fieldset
@@ -1512,7 +1488,7 @@ body.dark-mode .review .rating-stars button {
     
     #Homemain .category {
         flex: 0 1 calc(25% - 1.5em);
-        position: relative; /* Enables positioning for child elements */
+        position: relative; 
         text-align: left;
         border-radius: 0.3125em;
         overflow: hidden;
@@ -1523,25 +1499,23 @@ body.dark-mode .review .rating-stars button {
         width: 100%;
         height: auto;
         border-radius: 0.3125em;
-        display: block; /* Ensures the image fills the container */
+        display: block; 
     }
     
-    /* Responsive text inside the category box */
     #Homemain .category p {
         position: absolute;
-        bottom: 5%; /* 5% from the bottom of the box, making it responsive */
-        left: 5%; /* 5% from the left side of the box */
+        bottom: 5%; 
+        left: 5%; 
         margin: 0;
         font-family: 'Trebuchet MS', serif;
         color: #333;
         padding: 0.3em 0.6em;
-        border-radius: 0.3100em; /* Rounded corners for the text background */
-        font-size: 1rem; /* Default font size for large screens */
-        z-index: 2; /* Makes sure it appears above the image */
-        max-width: 90%; /* Prevents the text from overflowing */
+        border-radius: 0.3100em; 
+        font-size: 1rem; 
+        z-index: 2; 
+        max-width: 90%; 
     }
     
-    /* Hover effect for categories */
     #Homemain .category:hover {
         transform: translateY(-5px);
         box-shadow: 0 0.125em 0.312em rgba(0, 0, 0, 0.5);
@@ -1580,12 +1554,10 @@ body.dark-mode .review .rating-stars button {
         height: 1.875em;
     }
     
-    /* Hide the checkbox input */
     .floating-toggle-container input[type="checkbox"] {
         display: none;
     }
     
-    /* Toggle label styling as the background slider */
     .toggle-label {
         display: block;
         background-color: #333333;
@@ -1742,8 +1714,8 @@ body.dark-mode .review .rating-stars button {
     /* Default light theme styles */
     .week-start-date {
         font-size: 1.2em;
-        color: #333333; /* Dark text for light theme */
-        background-color: #DDD0C8; /* Light background for light theme */
+        color: #333333; 
+        background-color: #DDD0C8; 
         border-top: 0.1em solid #323232;
         text-align: center;
         font-weight: bold;
@@ -1753,8 +1725,8 @@ border-radius: 0.3125em;
     
     /* Dark theme styles */
     body.dark-mode .week-start-date,body.dark-mode #Homemain .offers-container  {
-        color: #dddddd; /* Light text for dark theme */
-        background-color: #121212; /* Dark background for dark theme */
+        color: #dddddd; 
+        background-color: #121212; 
     }
     
     #Homemain .additional-offers {
@@ -1769,7 +1741,6 @@ border-radius: 0.3125em;
     
     }
     
-    /* Ensure hidden section is initially not visible */
     #Homemain .additional-offers.hidden {
         display: none;
     }
@@ -1783,46 +1754,45 @@ border-radius: 0.3125em;
     }
   
     
-    /* Align Name on the Left */
   
-    /* Reviews Section */
+    /* Reviews */
     #Homemain .reviews-container {
         display: flex;
-        flex-wrap: nowrap; /* Prevents wrapping of review items */
-        gap: 0.5em; /* Space between items */
-        overflow-x: auto; /* Allows horizontal scrolling if content overflows */
-        justify-content: flex-start; /* Align items to the left */
+        flex-wrap: nowrap; 
+        gap: 0.5em; 
+        overflow-x: auto; 
+        justify-content: flex-start; 
         padding: 1em;
-        scroll-behavior: smooth; /* Enables smooth scrolling */
+        scroll-behavior: smooth; 
     }
     
     #Homemain .review-item {
         text-align: left;
         position: relative;
-        flex: 0 0 calc(20% - 0.5em); /* Each review takes 20% of the row minus the gap */
+        flex: 0 0 calc(20% - 0.5em); 
         background-color: #ffffff;
         border: 0.0625em solid #ccc;
         border-radius: 0.3125em;
         padding: 1em;
         box-shadow: 0 0.4em 0.4em rgba(0, 0, 0, 0.2);
-        font-size: 0.9em; /* Smaller font size for content */
+        font-size: 0.9em; 
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
    
     
     .review-item:hover {
-        transform: scale(1.05); /* Slight zoom effect */
+        transform: scale(1.05); 
         box-shadow: 0em 0.125em 0.25em rgba(0, 0, 0, 0.1);
     }
     
     .hover-info {
-        display: none; /* Hidden by default */
+        display: none; 
         position: absolute;
         top: 0;
         left: 0;
         width: 90%;
         height: 100%;
-        background-color: rgba(255, 255, 255, 0.95); /* Light overlay */
+        background-color: rgba(255, 255, 255, 0.95); 
         color: #333;
         padding: 0.625em;
         border-radius: 0.3125em;
@@ -1834,7 +1804,7 @@ border-radius: 0.3125em;
     
     
     #Homemain .review-item img {
-        max-width: 70%; /* Adjust the size of images */
+        max-width: 70%; 
         max-height: 70%;
         border-radius: 0.02em;
     
@@ -1842,25 +1812,24 @@ border-radius: 0.3125em;
     }
     
     #Homemain .review-item h4 {
-        font-size: 1rem; /* Smaller heading font size */
+        font-size: 1rem; 
         margin-bottom: 0.5em;
     }
     
     #Homemain .review-item p {
-        font-size: 0.8rem; /* Smaller paragraph font size */
+        font-size: 0.8rem; 
         line-height: 1.4;
         color: #666;
     }
     
-    /* Hover Effects */
     #Homemain .review-item:hover {
-        transform: scale(1.05); /* Slight zoom on hover */
+        transform: scale(1.05);
         box-shadow: 0 0.4em 0.4em rgba(0, 0, 0, 0.2);
     }
     
     #Homemain .more-button {
-        background-color: #333333; /* Light theme button background */
-        color: #ffffff; /* Light theme button text color */
+        background-color: #333333; 
+        color: #ffffff; 
         padding: 0.625em 1.25em;
         margin: 3%;
         border: none;
@@ -1888,18 +1857,18 @@ border-radius: 0.3125em;
             flex: 1 1 calc(50% - 1em);
         }
         #Homemain .offers-container {
-            justify-content: space-around; /* Maintain spacing */
+            justify-content: space-around; 
             gap:0.5rem;
 
         }
         #Homemain .offer-item {
-            flex: 1 1 calc(33% - 1em); /* Still 3 items per row */
-            max-width: calc(20% - 1em); /* Prevent excessive shrinking */
+            flex: 1 1 calc(33% - 1em); 
+            max-width: calc(20% - 1em); 
 
         }
         #Homemain .review-item img {
-            width: 100%; /* Expand image to fit the container */
-            height: auto; /* Maintain aspect ratio */
+            width: 100%; 
+            height: auto; 
         }
         
     }
@@ -1907,28 +1876,28 @@ border-radius: 0.3125em;
     /*ipad*/
     @media screen and (max-width: 770px) {
         #Homemain .category p {
-            font-size: 0.85rem; /* Smaller text */
-            padding: 0.2em 0.4em; /* Adjust padding */
+            font-size: 0.85rem; 
+            padding: 0.2em 0.4em; 
            
         }
         #Homemain .reviews-container {
-            gap: 0.5em; /* Adjust space between items */
+            gap: 0.5em; 
         }
     
         #Homemain .review-item {
-            flex: 1 1 calc(40% - 0.5em); /* Ensure all 5 reviews fit in one row */
+            flex: 1 1 calc(40% - 0.5em); 
         }
     
         #Homemain .review-item h4 {
-            font-size: 0.9rem; /* Reduce font size for smaller screens */
+            font-size: 0.9rem; 
         }
     
         #Homemain .review-item p {
-            font-size: 0.7rem; /* Further reduce paragraph font size */
+            font-size: 0.7rem; 
         }
     
         #Homemain .review-item img {
-            width: 50%; /* Reduce image size for smaller screens */
+            width: 50%; 
         }
     
         #Homemain .offers-container .offer-item,
@@ -1941,16 +1910,16 @@ border-radius: 0.3125em;
             margin: 0 ;
         }
         #Homemain .offer-item {
-            flex: 1 1 calc(100% - 1.5em); /* 1 item per row on smaller screens */
+            flex: 1 1 calc(100% - 1.5em); 
             max-width: calc(23% - 1em);        }
         #Homemain .offers-container {
-            justify-content: space-between; /* Maintain spacing */
+            justify-content: space-between; 
             gap:0.5rem;
 
         }
         #Homemain .offer-item {
-            flex: 1 1 calc(30% - 1em); /* Still 3 items per row */
-            max-width: calc(30% - 1em); /* Prevent excessive shrinking */
+            flex: 1 1 calc(30% - 1em); 
+            max-width: calc(30% - 1em); 
         }
         #Homemain .offer-item img {
             max-width: 100%; 
@@ -1958,41 +1927,41 @@ border-radius: 0.3125em;
         }
     
         #Homemain .offer-item h3 {
-            font-size: 1.2rem; /* Adjust heading size */
+            font-size: 1.2rem; 
                 }
     
         #Homemain .offer-item p {
-            font-size: 1rem; /* Adjust paragraph size */
+            font-size: 1rem; 
             line-height: 1.6;
         }
     
         #Homemain .more-button {
-            font-size: 0.9rem; /* Adjust button text size */
+            font-size: 0.9rem; 
             padding: 0.6em 0.8em; 
         }
         #Homemain .reviews-container {
-            gap: 0.5em; /* Adjust space between items */
+            gap: 0.5em; 
         }
     
         #Homemain .review-item {
-            flex: 0 0 calc(20% - 0.5em); /* Ensure all 5 reviews fit in one row */
+            flex: 0 0 calc(20% - 0.5em); 
         }
     
         #Homemain .review-item h4 {
-            font-size: 0.9rem; /* Reduce font size for smaller screens */
+            font-size: 0.9rem; 
         }
     
         #Homemain .review-item p {
-            font-size: 0.7rem; /* Further reduce paragraph font size */
+            font-size: 0.7rem;
         }
     
         #Homemain .review-item img {
             max-width: 100%;
-            width: 100%; /* Reduce image size for smaller screens */
+            width: 100%; 
         }
         #Homemain .review-item img {
-            width: 105%; /* Expand image to fit the container */
-            height: auto; /* Maintain aspect ratio */
+            width: 105%; 
+            height: auto; 
         }
     }
     
@@ -2012,8 +1981,8 @@ justify-content: space-between;      }
             flex: 1 1 calc(100% - 1em);
              }
         #Homemain .category p {
-            font-size: 0.6rem; /* Smaller text */
-            padding: 0.2em 0.4em; /* Adjust padding */
+            font-size: 0.6rem; 
+            padding: 0.2em 0.4em; 
            
         }
 
@@ -2032,11 +2001,11 @@ justify-content: space-between;      }
             font-size: 1rem;
         }
         #Homemain .offers-container {
-            justify-content: center; /* Maintain spacing */
+            justify-content: center; 
         }
         #Homemain .offer-item {
-            flex: 0 1 calc(100% - 0.5em);/* Still 3 items per row */
-            max-width: calc(23% - 1em); /* Prevent excessive shrinking */
+            flex: 0 1 calc(100% - 0.5em);
+            max-width: calc(23% - 1em); 
         }
         #Homemain .offer-item img {
             max-width: 100%; 
@@ -2109,7 +2078,7 @@ padding: 1em;   }
     height: 1.5em;
 }
         #Homemain .category p {
-            font-size: 0.5rem; /* Smallest font for extra small phones */
+            font-size: 0.5rem; 
         }
         #Homemain .category-container img{
             width: 100%;
@@ -2120,17 +2089,16 @@ padding: 1em;   }
      #Homemain .category{
         flex: 0 1 calc(33% - 0.3em);  }
         #Homemain  h2 {
-            font-size: 1.2rem; /* Smaller heading size */
+            font-size: 1.2rem; 
         }
     
-        /* Adjust the font size for the offer items */
         #Homemain .offer-item h3 {
-            font-size: 0.7rem; /* Adjust title font size */
+            font-size: 0.7rem; 
         }
     
         #Homemain .offer-item p {
-            font-size: 0.5rem; /* Adjust paragraph font size */
-            line-height: 1.4; /* Improve readability */
+            font-size: 0.5rem; 
+            line-height: 1.4; 
         }
     
         #Homemain .more-button {
