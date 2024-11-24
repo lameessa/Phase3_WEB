@@ -1479,22 +1479,21 @@ body.dark-mode .review .rating-stars button {
         text-align: center;
     }
 	
-    
     #Homemain .offer-item {
         flex: 0 1 calc(20% - 1.5em);
         background-color: #FFFFFF;
-        border: 1px solid #ccc;
-        border-radius: 5px;
+        border: .2em  solid #ccc;
+        border-radius: .3125em;
         padding: 1em;
         text-align: center;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0.1em 0 rgba(0, 0, 0, 0.5);
     }
     
     
     #Homemain .offer-item img {
         max-width: 90%;
         height: auto;
-        border-radius: 5px;
+        border-radius: 0.3125em;
         margin-bottom: 1em;
     }
     
@@ -1515,7 +1514,7 @@ body.dark-mode .review .rating-stars button {
         flex: 0 1 calc(25% - 1.5em);
         position: relative; /* Enables positioning for child elements */
         text-align: left;
-        border-radius: 5px;
+        border-radius: 0.3125em;
         overflow: hidden;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
@@ -1523,7 +1522,7 @@ body.dark-mode .review .rating-stars button {
     #Homemain .category a img {
         width: 100%;
         height: auto;
-        border-radius: 5px;
+        border-radius: 0.3125em;
         display: block; /* Ensures the image fills the container */
     }
     
@@ -1536,7 +1535,7 @@ body.dark-mode .review .rating-stars button {
         font-family: 'Trebuchet MS', serif;
         color: #333;
         padding: 0.3em 0.6em;
-        border-radius: 3px; /* Rounded corners for the text background */
+        border-radius: 0.3100em; /* Rounded corners for the text background */
         font-size: 1rem; /* Default font size for large screens */
         z-index: 2; /* Makes sure it appears above the image */
         max-width: 90%; /* Prevents the text from overflowing */
@@ -1545,7 +1544,7 @@ body.dark-mode .review .rating-stars button {
     /* Hover effect for categories */
     #Homemain .category:hover {
         transform: translateY(-5px);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0.125em 0.312em rgba(0, 0, 0, 0.5);
     }
     /* Reviews Section */
     
@@ -1574,11 +1573,11 @@ body.dark-mode .review .rating-stars button {
     
     .floating-toggle-container {
         position: fixed;
-        bottom: 20px;
-        right: 20px;
+        bottom: 1.25em;
+        right: 1.25em;
         z-index: 1000;
-        width: 60px;
-        height: 30px;
+        width: 3.75em;
+        height: 1.875em;
     }
     
     /* Hide the checkbox input */
@@ -1590,7 +1589,7 @@ body.dark-mode .review .rating-stars button {
     .toggle-label {
         display: block;
         background-color: #333333;
-        border-radius: 30px;
+        border-radius: 1.875em;
         position: relative;
         cursor: pointer;
         width: 100%;
@@ -1602,10 +1601,10 @@ body.dark-mode .review .rating-stars button {
     .toggle-label::after {
         content: '';
         position: absolute;
-        top: 3px;
-        left: 3px;
-        width: 24px;
-        height: 24px;
+        top: 0.1875em;
+        left: 0.1875em;
+        width: 1.5em;
+        height: 1.5em;
         background-color: #ffffff;
         border-radius: 50%;
         transition: 0.3s;
@@ -1623,12 +1622,12 @@ body.dark-mode .review .rating-stars button {
     }
     
     .moon-icon {
-        left: 8px;
+        left: 0.5em;
         color: #FFD700;
     }
     
     .sun-icon {
-        right: 8px;
+        right:0.5em;
         color: #cccccc;
     }
     
@@ -1721,7 +1720,7 @@ body.dark-mode .review .rating-stars button {
     body.dark-mode #Homemain .review-item {
         background-color: #222222; 
         color: #dddddd;
-        border: 1px solid #444444;
+        border: 0.0625em solid #444444;
     }
     
     
@@ -1745,11 +1744,11 @@ body.dark-mode .review .rating-stars button {
         font-size: 1.2em;
         color: #333333; /* Dark text for light theme */
         background-color: #DDD0C8; /* Light background for light theme */
-        padding: 20px 20px;
         border-top: 0.1em solid #323232;
-        border-radius: 5px;
         text-align: center;
         font-weight: bold;
+        padding: 1.25em 1.25em;
+border-radius: 0.3125em;
     }
     
     /* Dark theme styles */
@@ -1762,10 +1761,10 @@ body.dark-mode .review .rating-stars button {
         max-width: 100%;
         display: flex;
         flex-wrap: nowrap;
-        gap: 20px;
+        gap: 1.25em;
          justify-content: space-around;
         overflow: hidden;
-        padding: 20px;
+        padding: 1.25em;
     
     
     }
@@ -1802,8 +1801,8 @@ body.dark-mode .review .rating-stars button {
         position: relative;
         flex: 0 0 calc(20% - 0.5em); /* Each review takes 20% of the row minus the gap */
         background-color: #ffffff;
-        border: 1px solid #ccc;
-        border-radius: 5px;
+        border: 0.0625em solid #ccc;
+        border-radius: 0.3125em;
         padding: 1em;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
         font-size: 0.9em; /* Smaller font size for content */
@@ -1813,7 +1812,7 @@ body.dark-mode .review .rating-stars button {
     
     .review-item:hover {
         transform: scale(1.05); /* Slight zoom effect */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        box-shadow: 0em 0.125em 0.25em rgba(0, 0, 0, 0.1);
     }
     
     .hover-info {
@@ -1825,11 +1824,11 @@ body.dark-mode .review .rating-stars button {
         height: 100%;
         background-color: rgba(255, 255, 255, 0.95); /* Light overlay */
         color: #333;
-        padding: 10px;
-        border-radius: 5px;
+        padding: 0.625em;
+        border-radius: 0.3125em;
         text-align: left;
         z-index: 10;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        box-shadow: 0em 0.125em 0.25em rgba(0, 0, 0, 0.1);
         overflow: hidden;
     }
     
@@ -1862,10 +1861,10 @@ body.dark-mode .review .rating-stars button {
     #Homemain .more-button {
         background-color: #333333; /* Light theme button background */
         color: #ffffff; /* Light theme button text color */
-        padding: 10px 20px;
+        padding: 0.625em 1.25em;
         margin: 3%;
         border: none;
-        border-radius: 5px;
+        border-radius: 0.3125em;
         cursor: pointer;
         transition: background-color 0.3s ease;
     }
@@ -1939,7 +1938,7 @@ body.dark-mode .review .rating-stars button {
         }
     
         nav .categories-head a {
-            margin: 0 0.5em;
+            margin: 0 ;
         }
         #Homemain .offer-item {
             flex: 1 1 calc(100% - 1.5em); /* 1 item per row on smaller screens */
@@ -2085,13 +2084,31 @@ justify-content: space-between;      }
     /* small phone*/
     
     @media screen and (max-width: 380px) {
+        nav .logo img{
+            width:6em;
+        }
+        .oval-button{
+            padding: 1em 2em;
+            margin: 0;
+        }
         .categories-head a{
             padding: 0;
+            margin: 0;
         }
         nav{
             display: flex;
             flex-wrap: wrap;
-justify-content: space-between;      }
+justify-content: space-between;   
+padding: 1em;   }
+
+.icon {
+	
+	margin-left: 0;
+	
+    width: 1.5em;
+	
+    height: 1.5em;
+}
         #Homemain .category p {
             font-size: 0.5rem; /* Smallest font for extra small phones */
         }
