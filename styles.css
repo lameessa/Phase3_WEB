@@ -1348,7 +1348,8 @@ body.dark-mode .review{
 body.dark-mode .cart .hover-info,
 body.dark-mode .cart .summary ,
 body.dark-mode #CustomerMain .recommended-item ,
-body.dark-mode .review{
+body.dark-mode .review,
+body.dark-mode .categ .item{
     background-color: #222222;
     color: #dddddd;
 }
@@ -1477,6 +1478,7 @@ body.dark-mode .review .rating-stars button {
         justify-content: space-around;
         text-align: center;
     }
+	
     
     #Homemain .offer-item {
         flex: 0 1 calc(25% - 1.5em);
