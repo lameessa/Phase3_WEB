@@ -1870,6 +1870,9 @@ border-radius: 0.3125em;
             width: 100%; 
             height: auto; 
         }
+        .categories-head a{
+            padding: 0;
+        }
         
     }
     
