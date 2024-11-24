@@ -33,7 +33,7 @@ document.getElementById("review-form").addEventListener("submit", function(event
 		
     alert(`Thank you for your feedback!\nYour rating for ${selectedProduct} is ${rating}.`);
     // redirect to HomePage.html
-    window.location.href = "HomePage.html";		});
+    window.location.href = "index.html";		});
 
 //  Dark Mode 
 document.addEventListener("DOMContentLoaded", () => {
