@@ -1999,7 +1999,13 @@ body.dark-mode .review .rating-stars button {
     
     /*large phone */
     @media screen and (max-width: 480px) {
-       
+        .categories-head a{
+            padding: 0;
+        }
+        nav{
+            display: flex;
+            flex-wrap: wrap;
+justify-content: space-between;      }
         #Homemain .category{
             flex: 0 1 calc(33% - 0.3em);  }
         #Homemain .category-container{
@@ -2079,6 +2085,13 @@ body.dark-mode .review .rating-stars button {
     /* small phone*/
     
     @media screen and (max-width: 380px) {
+        .categories-head a{
+            padding: 0;
+        }
+        nav{
+            display: flex;
+            flex-wrap: wrap;
+justify-content: space-between;      }
         #Homemain .category p {
             font-size: 0.5rem; /* Smallest font for extra small phones */
         }
