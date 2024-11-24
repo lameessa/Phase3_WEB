@@ -1779,7 +1779,7 @@ border-radius: 0.3125em;
     #Homemain .rating {
         font-size: 1.2em;
         color: #FFD700;
-        margin-bottom: 10px;
+        margin-bottom: 0.1em;
     }
   
     
@@ -1804,7 +1804,7 @@ border-radius: 0.3125em;
         border: 0.0625em solid #ccc;
         border-radius: 0.3125em;
         padding: 1em;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0.4em 0.4em rgba(0, 0, 0, 0.2);
         font-size: 0.9em; /* Smaller font size for content */
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
@@ -1828,7 +1828,7 @@ border-radius: 0.3125em;
         border-radius: 0.3125em;
         text-align: left;
         z-index: 10;
-        box-shadow: 0em 0.125em 0.25em rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0.4em 0.4em rgba(0, 0, 0, 0.2);
         overflow: hidden;
     }
     
@@ -1836,7 +1836,7 @@ border-radius: 0.3125em;
     #Homemain .review-item img {
         max-width: 70%; /* Adjust the size of images */
         max-height: 70%;
-        border-radius: 2px;
+        border-radius: 0.02em;
     
         text-align: center;
     }
@@ -1855,7 +1855,7 @@ border-radius: 0.3125em;
     /* Hover Effects */
     #Homemain .review-item:hover {
         transform: scale(1.05); /* Slight zoom on hover */
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0.4em 0.4em rgba(0, 0, 0, 0.2);
     }
     
     #Homemain .more-button {
@@ -1968,7 +1968,7 @@ border-radius: 0.3125em;
     
         #Homemain .more-button {
             font-size: 0.9rem; /* Adjust button text size */
-            padding: 10px 20px; 
+            padding: 0.6em 0.8em; 
         }
         #Homemain .reviews-container {
             gap: 0.5em; /* Adjust space between items */
@@ -2054,29 +2054,28 @@ justify-content: space-between;      }
     
         #Homemain .more-button {
             font-size: 0.7rem;
-            padding: 6px 10px;
+            padding: 0.6em 0.7em;
         }
         #Homemain .review-item img {
             max-width: 100%;
     
-            width: 105%; /* Expand image to fit the container */
-            height: auto; /* Maintain aspect ratio */
+            width: 105%; 
+            height: auto; 
         }
         #Homemain .review-item h3 {
-            font-size: 1rem; /* Adjust title size */
-        }
+		font-size: 1rem; }
     
         #Homemain .review-item p {
-            font-size: 0.8rem; /* Adjust paragraph size */
+            font-size: 0.8rem; 
         }
     
         #Homemain .review-item .rating{
             font-size:0.9rem ;
         }
         #Homemain .review-item{
-            flex: 0 1 calc(100% - 0.5em);/* Still 3 items per row */
+            flex: 0 1 calc(100% - 0.5em);
 
-            max-width: calc(30% - 1em); /* Prevent excessive shrinking */
+            max-width: calc(30% - 1em); 
         }
        
     }
@@ -2134,17 +2133,15 @@ padding: 1em;   }
             line-height: 1.4; /* Improve readability */
         }
     
-        /* Adjust the button font size */
         #Homemain .more-button {
-            font-size: 0.8rem; /* Smaller text for the "More" button */
-            padding: 8px 15px; /* Adjust padding for smaller screens */
+            font-size: 0.8rem; 
+            padding: 0.5em 0.5em; 
         }
     
-        /* Adjust image size within the offer items */
         #Homemain .offer-item img {
-            max-width: 100%; /* Make images more responsive */
-            height: auto; /* Maintain aspect ratio */
-            margin-bottom: 0.5em; /* Add space below the image */
+            max-width: 100%; 
+            height: auto; 
+            margin-bottom: 0.5em; 
         }
         #Homemain .offer-item{
             max-width: calc(33% - 1em); 
@@ -2153,32 +2150,35 @@ padding: 1em;   }
         }
         /* Reviews Container */
         #Homemain .reviews-container {
-            gap: 0.5em; /* Smaller gap between review items */
+            gap: 0.5em; 
             overflow-x: auto;
-            justify-content: flex-start; /* Align items to the left */
+            justify-content: flex-start; 
         }
     
         #Homemain .review-item {
-            flex: 0 0 calc(100% - 0.5em); /* Single item per row */
-            padding: 0.5em; /* Smaller padding */
+            flex: 0 0 calc(100% - 0.5em); 
+            padding: 0.5em; 
         }
     
         #Homemain .review-item img {
             max-width: 100%;
-            width: 105%; /* Expand image to fit the container */
-            height: auto; /* Maintain aspect ratio */
+            width: 105%;
+            height: auto; 
         }
     
         #Homemain .review-item h3 {
-            font-size: 0.7rem; /* Adjust title size */
+            font-size: 0.7rem; 
         }
     
         #Homemain .review-item p {
-            font-size: 0.6rem; /* Adjust paragraph size */
+            font-size: 0.6rem; 
         }
     
         #Homemain .review-item .rating{
             font-size:0.7rem ;
         }
+		footer{
+			font-size:0.7em;
+		}
         
     }
