@@ -65,64 +65,74 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-    // Display offers from localStorage and include existing hardcoded offers
-    document.addEventListener("DOMContentLoaded", () => {
-        const offersContainer = document.querySelector(".offers-container");
-        const toggleButton = document.getElementById("toggleOffersButton");
+   // Display offers from localStorage and include existing hardcoded offers
+document.addEventListener("DOMContentLoaded", () => {
+    const offersContainer = document.querySelector(".offers-container");
+    const toggleButton = document.getElementById("toggleOffersButton");
 
-        // Load offers from localStorage
-        let offers = JSON.parse(localStorage.getItem("offers")) || [];
+    // Load offers from localStorage
+    let offers = JSON.parse(localStorage.getItem("offers")) || [];
 
-        // Get existing hardcoded offers from the page
-        const existingOffers = Array.from(offersContainer.querySelectorAll(".offer-item")).map(offerItem => ({
-            title: offerItem.querySelector("h3").textContent,
-            description: offerItem.querySelector("p").textContent,
-            imageUrl: offerItem.querySelector("img").src,
-            discount: offerItem.querySelector("p:last-of-type") ? offerItem.querySelector("p:last-of-type").textContent.replace('Discount: ', '').replace('%', '') : null
-        }));
+    // Get existing hardcoded offers from the page
+    const existingOffers = Array.from(offersContainer.querySelectorAll(".offer-item")).map(offerItem => ({
+        title: offerItem.querySelector("h3").textContent,
+        description: offerItem.querySelector("p").textContent,
+        imageUrl: offerItem.querySelector("img").src,
+        discount: offerItem.querySelector("p:last-of-type")
+            ? parseInt(
+                offerItem.querySelector("p:last-of-type").textContent
+                    .replace('Discount: ', '')
+                    .replace('%', '')
+            ) || null
+            : null // Extract numeric discount
+    }));
 
-        // Combine hardcoded and stored offers
-        offers = [...existingOffers, ...offers];
+    // Combine hardcoded and stored offers
+    offers = [...existingOffers, ...offers];
 
-        // Initial state to show only the first 3 offers
-        let showAll = false;
+    // Initial state to show only the first 3 offers
+    let showAll = false;
 
-        // Function to display offers with a limit
-        function displayOffers() {
-            offersContainer.innerHTML = ''; // Clear existing offers to re-render correctly
+    // Function to display offers with a limit
+    function displayOffers() {
+        offersContainer.innerHTML = ''; // Clear existing offers to re-render correctly
 
-            // Display the initial 3 offers or all offers based on the state
-            const offersToShow = showAll ? offers : offers.slice(0, 3);
+        // Display the initial 3 offers or all offers based on the state
+        const offersToShow = showAll ? offers : offers.slice(0, 3);
 
-            // Render all offers (hardcoded + new)
-            offersToShow.forEach((offer, index) => {
-                const offerItem = document.createElement("div");
-                offerItem.classList.add("offer-item");
-                offerItem.id = `offer-${index}`;
-                offerItem.innerHTML = `
-                    <h3>${offer.title}</h3>
-                    <img src="${offer.imageUrl || 'default-image.png'}" alt="${offer.title}">
-                    <p>${offer.description}</p>
-                    ${offer.discount ? `<p>Discount: ${offer.discount}%</p>` : ''}
-                `;
-                offersContainer.appendChild(offerItem);
-            });
-
-            // Update button visibility and text
-            if (offers.length > 3) {
-                toggleButton.style.display = 'block';
-                toggleButton.textContent = showAll ? 'Less' : 'More';
-            } else {
-                toggleButton.style.display = 'none';
-            }
-        }
-
-        // Initial display of offers
-        displayOffers();
-
-        // Event listener for the "More" button
-        toggleButton.addEventListener('click', () => {
-            showAll = !showAll;
-            displayOffers();
+        // Render all offers (hardcoded + new)
+        offersToShow.forEach((offer, index) => {
+            const offerItem = document.createElement("div");
+            offerItem.classList.add("offer-item");
+            offerItem.id = `offer-${index}`;
+            offerItem.innerHTML = `
+                <h3>${offer.title}</h3>
+                <img src="${offer.imageUrl || 'default-image.png'}" alt="${offer.title}">
+                <p>${offer.description}</p>
+                ${
+                    offer.discount !== null
+                        ? `<p>Discount: ${offer.discount}%</p>` // Always add percentage symbol
+                        : ''
+                }
+            `;
+            offersContainer.appendChild(offerItem);
         });
+
+        // Update button visibility and text
+        if (offers.length > 3) {
+            toggleButton.style.display = 'block';
+            toggleButton.textContent = showAll ? 'Less' : 'More';
+        } else {
+            toggleButton.style.display = 'none';
+        }
+    }
+
+    // Initial display of offers
+    displayOffers();
+
+    // Event listener for the "More" button
+    toggleButton.addEventListener('click', () => {
+        showAll = !showAll;
+        displayOffers();
     });
+});
