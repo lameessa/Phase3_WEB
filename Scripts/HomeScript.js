@@ -136,3 +136,23 @@ document.addEventListener("DOMContentLoaded", () => {
         displayOffers();
     });
 });
+// Add hover effect for review items
+document.addEventListener("DOMContentLoaded", () => {
+    const reviewItems = document.querySelectorAll(".review-item");
+
+    reviewItems.forEach((item) => {
+        const hoverInfo = item.querySelector(".hover-info");
+
+        if (hoverInfo) {
+            // Show hover-info on mouseover
+            item.addEventListener("mouseover", () => {
+                hoverInfo.style.display = "block";
+            });
+
+            // Hide hover-info on mouseout
+            item.addEventListener("mouseout", () => {
+                hoverInfo.style.display = "none";
+            });
+        }
+    });
+});
