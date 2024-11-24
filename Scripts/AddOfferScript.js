@@ -46,12 +46,23 @@ offerForm.addEventListener("submit", (event) => {
     const discount = document.getElementById("offer-discount").value.trim();
     const imageInput = document.getElementById("offer-upload").files[0];
 
-    if (!title || !description || !discount ) {
+    if (!title && !description && !discount ) {
         alert("Please fill in all fields.");
         return;
     }
 
-
+    if (!title) {
+        alert("Please fill in the Title.");
+        return;
+    }
+	    if (!description) {
+        alert("Please fill in the Descreption.");
+        return;
+    }
+	    if (!discount ) {
+        alert("Please provide a Discount.");
+        return;
+    }
 
     
     if (!imageInput) {
