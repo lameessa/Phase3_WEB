@@ -1910,8 +1910,7 @@ border-radius: 0.3125em;
             margin: 0 ;
         }
         #Homemain .offer-item {
-            flex: 1 1 calc(100% - 1.5em); 
-            max-width: calc(23% - 1em);        }
+            flex: 1 1 calc(100% - 1.5em);       }
         #Homemain .offers-container {
             justify-content: space-between; 
             gap:0.5rem;
@@ -1919,7 +1918,7 @@ border-radius: 0.3125em;
         }
         #Homemain .offer-item {
             flex: 1 1 calc(30% - 1em); 
-            max-width: calc(30% - 1em); 
+            max-width: calc(25% - 1em); 
         }
         #Homemain .offer-item img {
             max-width: 100%; 
