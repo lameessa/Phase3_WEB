@@ -173,6 +173,7 @@ flex-wrap: nowrap;
 }
 .recommendations h2{
    margin: 1.875em;
+	text-align:center;
 }
 .recommended-item p{
    text-align: left;
@@ -1524,8 +1525,8 @@ body.dark-mode .review .rating-stars button {
     }
     
     footer .contact-info img {
-        width: 1em;
-        height: 1em;
+        width: 0.8em;
+        height: 0.8em;
     }
     
     
@@ -2152,7 +2153,7 @@ padding: 1em;   }
             font-size:0.7rem ;
         }
 		footer{
-			font-size:0.7em;
+			font-size:0.6em;
 		}
         
     }
