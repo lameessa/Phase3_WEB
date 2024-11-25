@@ -1512,7 +1512,7 @@ body.dark-mode .review .rating-stars button {
     footer {
         background-color: #323232;
         color: #F5F5F5;
-        padding: 1em;
+        padding: 0.6em;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -1520,7 +1520,7 @@ body.dark-mode .review .rating-stars button {
     
     footer .contact-info {
         display: flex;
-        gap: 1em;
+        flex-direction: column;
         align-items: center;
     }
     
