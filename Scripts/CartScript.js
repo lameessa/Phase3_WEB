@@ -78,6 +78,11 @@ function updateSummary() {
 
 function handleCheckout(event) {
     event.preventDefault(); // prevent submission
+    
+    if (cart.length === 0) {
+        alert("Your cart is empty. Please add items to checkout.");
+        return; 
+    }
     let subtotal = 0;
     cart.forEach((item, index) => {
         const checkbox = document.getElementById(`item-${index}`);
